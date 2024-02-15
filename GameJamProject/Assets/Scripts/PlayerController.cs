@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("References")]
+    [Header ("Component References")]
+    public Animator playerAnim;
+
+    [Header("Inputs")]
     private float horizontalInput;
     private float verticalInput;
+
+    [Header ("Variables")]
     public float speed;
     public float rotationSpeed;
     // Start is called before the first frame update
     void Start(){
-        
+        playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update(){
         horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        verticalInput = Input.GetAxis("Vertical"); 
 
         MovePlayer();
+        PlayerAnimations();
     }
 
     void MovePlayer(){
@@ -28,5 +34,9 @@ public class PlayerController : MonoBehaviour
         
         //To rotate player
         transform.Rotate(Vector3.up * rotationSpeed * horizontalInput * Time.deltaTime);
+    }
+
+    void PlayerAnimations(){
+        
     }
 }
