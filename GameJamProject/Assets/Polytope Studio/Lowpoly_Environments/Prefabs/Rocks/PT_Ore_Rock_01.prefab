@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1324489145511453036}
-  - component: {fileID: 6069612551507580445}
   m_Layer: 0
   m_Name: PT_Ore_Rock_01
   m_TagString: Untagged
@@ -35,33 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &6069612551507580445
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813357942169304022}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.077176064, y: 0.22327052, z: 0.010519341}
-  m_Size: 0.6325343
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.25
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2787052077589203084}
-  - screenRelativeHeight: 0.125
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1379613089519791155}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2694475635295835367}
-  m_Enabled: 1
 --- !u!1 &3513244448727352474
 GameObject:
   m_ObjectHideFlags: 0
