@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 3396174388722069082}
   - component: {fileID: 3651040237905038081}
   - component: {fileID: 7532243803686030394}
+  - component: {fileID: 7210537752674430701}
   m_Layer: 0
   m_Name: PT_Fruit_Tree_01_pears_LOD0
   m_TagString: Untagged
@@ -230,6 +231,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &7210537752674430701
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3491555602639996928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 6.575604
+  m_Direction: 1
+  m_Center: {x: -0.14, y: 2.9956286, z: -0.25}
 --- !u!1 &7765329102591482917
 GameObject:
   m_ObjectHideFlags: 0
