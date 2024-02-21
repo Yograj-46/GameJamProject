@@ -123,7 +123,6 @@ public class PlayerController : MonoBehaviour
 
             //Call Attack Triggers
             playerAnim.SetTrigger("LightAttack" + currentAttack);
-            AttackEnemy(10);
             //Reset Timer
             timeSinceAttack = 0;
         }
@@ -137,7 +136,6 @@ public class PlayerController : MonoBehaviour
         foreach (Collider col in colInfo)
         {
             col.GetComponent<EnemyHealth>().TakeDamage(damage);
-            Animator animator = col.GetComponent<Animator>();
         }
     }
     void OnDrawGizmosSelected()
@@ -167,7 +165,6 @@ public class PlayerController : MonoBehaviour
             //Call Attack Triggers
             playerAnim.SetTrigger("HeavyAttack" + currentAttack);
             
-            AttackEnemy(20);
             //Reset Timer
             timeSinceAttack = 0;
         }
@@ -188,6 +185,7 @@ public class PlayerController : MonoBehaviour
 
         foreach (Collider col in colInfo)
         {
+            AttackEnemy(10);
             Animator animator = col.GetComponent<Animator>();
             animator.SetTrigger("LightAttack");
         }
@@ -198,6 +196,7 @@ public class PlayerController : MonoBehaviour
 
         foreach (Collider col in colInfo)
         {
+            AttackEnemy(20);
             Animator animator = col.GetComponent<Animator>();
             animator.SetTrigger("HeavyAttack");
         }

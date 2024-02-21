@@ -21,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
         {
             animator.SetTrigger("Death");
             animator.GetComponent<CapsuleCollider>().enabled = false;
+
         }
     }
 }
