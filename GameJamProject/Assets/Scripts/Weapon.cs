@@ -6,13 +6,14 @@ public class Weapon : MonoBehaviour
 {
     PlayerController controller;
     public bool isEquiped = false;
-    // Start is called before the first frame update
+
+    
+
     void Start()
     {
         controller = FindObjectOfType<PlayerController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -27,4 +28,6 @@ public class Weapon : MonoBehaviour
 
         }
     }
+    
+   
 }

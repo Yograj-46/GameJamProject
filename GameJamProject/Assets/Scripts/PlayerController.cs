@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -30,7 +28,10 @@ public class PlayerController : MonoBehaviour
     public int currentAttack = 0;
 
 
-
+    //Attack Range
+    [SerializeField] Transform attackPoint;
+    [SerializeField] float attackRange;
+    [SerializeField] LayerMask enemyMask;
 
     private void Update()
     {
@@ -122,15 +123,27 @@ public class PlayerController : MonoBehaviour
 
             //Call Attack Triggers
             playerAnim.SetTrigger("LightAttack" + currentAttack);
-
+            AttackEnemy();
             //Reset Timer
             timeSinceAttack = 0;
         }
 
+        
+    }
+    void AttackEnemy()
+    {
+        Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
 
-
-
-
+        foreach (Collider col in colInfo)
+        {
+            Debug.Log("we hit " + col.name);
+        }
+    }
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
     private void HeavyAttack()
     {
@@ -152,7 +165,7 @@ public class PlayerController : MonoBehaviour
 
             //Call Attack Triggers
             playerAnim.SetTrigger("HeavyAttack" + currentAttack);
-
+            AttackEnemy();
             //Reset Timer
             timeSinceAttack = 0;
         }
@@ -166,5 +179,9 @@ public class PlayerController : MonoBehaviour
     public void ResetAttack()
     {
         isAttacking = false;
-    } 
-}   
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.gameObject.name);
+    }
+}
