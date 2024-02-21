@@ -882,10 +882,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.6195984
   m_Height: 2.9324837
   m_Direction: 1
-  m_Center: {x: 0, y: 0.96624184, z: 0}
+  m_Center: {x: 0, y: 0.96624184, z: -0.011810303}
 --- !u!54 &1073947400
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -902,6 +902,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!95 &1073947401 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4414871117303439920, guid: aef9a3e063e740f4d8100584de73ceb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1960327660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1073947403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073947396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afaf0cb6f5dab1d49b4fe582044315d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  animator: {fileID: 1073947401}
 --- !u!1001 &1091146785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1336,6 +1357,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Magic Orb (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761516298007350891, guid: 8c7721d1917161f42a17b08a833883be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c7721d1917161f42a17b08a833883be, type: 3}
@@ -33778,7 +33804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &7174656702417373340
 GameObject:
   m_ObjectHideFlags: 0

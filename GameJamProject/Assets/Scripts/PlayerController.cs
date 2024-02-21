@@ -123,20 +123,21 @@ public class PlayerController : MonoBehaviour
 
             //Call Attack Triggers
             playerAnim.SetTrigger("LightAttack" + currentAttack);
-            AttackEnemy();
+            AttackEnemy(10);
             //Reset Timer
             timeSinceAttack = 0;
         }
 
         
     }
-    void AttackEnemy()
+    void AttackEnemy(int damage)
     {
         Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
 
         foreach (Collider col in colInfo)
         {
-            Debug.Log("we hit " + col.name);
+            col.GetComponent<EnemyHealth>().TakeDamage(damage);
+            Animator animator = col.GetComponent<Animator>();
         }
     }
     void OnDrawGizmosSelected()
@@ -165,7 +166,8 @@ public class PlayerController : MonoBehaviour
 
             //Call Attack Triggers
             playerAnim.SetTrigger("HeavyAttack" + currentAttack);
-            AttackEnemy();
+            
+            AttackEnemy(20);
             //Reset Timer
             timeSinceAttack = 0;
         }
@@ -180,8 +182,24 @@ public class PlayerController : MonoBehaviour
     {
         isAttacking = false;
     }
-    public void OnTriggerEnter(Collider other)
+    public void LightAttackReaction()
     {
-        Debug.Log(other.gameObject.name);
+        Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
+
+        foreach (Collider col in colInfo)
+        {
+            Animator animator = col.GetComponent<Animator>();
+            animator.SetTrigger("LightAttack");
+        }
+    }
+    public void HeavyAttackReaction()
+    {
+        Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
+
+        foreach (Collider col in colInfo)
+        {
+            Animator animator = col.GetComponent<Animator>();
+            animator.SetTrigger("HeavyAttack");
+        }
     }
 }
