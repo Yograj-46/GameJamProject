@@ -13,19 +13,11 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        healthSlider = GetComponent<Slider>();
-        damageSlider = GetComponent<Slider>();
         healthSlider.value = maxHealth;
         healthSlider.maxValue = maxHealth;
         damageSlider.maxValue = maxHealth;
     }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy Weapon"))
-        {
-            healthSlider.value -= hitpoint;
-        }
-    }
+
     private void Update()
     {
 
@@ -34,6 +26,11 @@ public class PlayerHealth : MonoBehaviour
 
         if (healthSlider.value < minHealth)
             PlayerOut();
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            healthSlider.value -= hitpoint;
+        }
     }
     void PlayerOut()
     {

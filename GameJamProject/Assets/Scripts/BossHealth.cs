@@ -9,23 +9,16 @@ public class BossHealth : MonoBehaviour
     public Slider damageSlider;
     float hitpoint = 10, speed = 0.5f;
     int maxHealth = 200, minHealth = 1;
+    Animator animator;
 
 
     private void Start()
     {
-        healthSlider = GetComponent<Slider>();
-        damageSlider = GetComponent<Slider>();
         healthSlider.maxValue = maxHealth;
         damageSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
     }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Weapon"))
-        {
-            healthSlider.value -= hitpoint;
-        }
-    }
+
     private void Update()
     {
 
@@ -33,7 +26,15 @@ public class BossHealth : MonoBehaviour
             damageSlider.value -= speed;
 
         if (healthSlider.value < minHealth)
+        {
+            animator.GetComponent<CapsuleCollider>().enabled = false;
             PlayerWin();
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            healthSlider.value -= hitpoint;
+        }
+
     }
     void PlayerWin()
     {
