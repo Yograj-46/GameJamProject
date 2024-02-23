@@ -18,6 +18,11 @@ public class PlayerHealth : MonoBehaviour
         damageSlider.maxValue = maxHealth;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("health potion"))
+            healthSlider.value += 10;
+    }
     private void Update()
     {
 
