@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] Animator enemyAnim;
+    [SerializeField] Transform player;
+    [SerializeField] CharacterController controller;
+    public float chasingSpeed;
     public bool isChasing;
     public bool isAttacking;
     private EnemyHealth health;
@@ -14,6 +17,7 @@ public class Enemy : MonoBehaviour
     {
         health = GetComponent<EnemyHealth>();
         enemyAnim = GetComponent<Animator>();
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -24,7 +28,9 @@ public class Enemy : MonoBehaviour
     }
 
     void Chase(){
-        
+        enemyAnim.SetBool("Chasing", true);
+
+        Vector3.MoveTowards(transform.position, player.transform.position, chasingSpeed * Time.deltaTime);
     }
     
     void Dead(){
