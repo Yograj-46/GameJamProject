@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
 
         if(enemy.remainingDistance > enemy.stoppingDistance){
             enemy.SetDestination(player.position);
-            character.Move(enemy.desiredVelocity, false, false);
+            character.Move(player.position, false, false);
         }
         else{
             character.Move(Vector3.zero, false, false);
