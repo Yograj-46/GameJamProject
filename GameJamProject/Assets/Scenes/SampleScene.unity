@@ -5931,25 +5931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
-  m_JumpPower: 6
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.2
-  m_Rigidbody: {fileID: 0}
-  m_Animator: {fileID: 0}
-  m_IsGrounded: 0
-  m_OrigGroundCheckDistance: 0
-  m_TurnAmount: 0
-  m_ForwardAmount: 0
-  m_GroundNormal: {x: 0, y: 0, z: 0}
-  m_CapsuleHeight: 0
-  m_CapsuleCenter: {x: 0, y: 0, z: 0}
-  m_Capsule: {fileID: 0}
-  m_Crouching: 0
 --- !u!54 &1073947411
 Rigidbody:
   m_ObjectHideFlags: 0
