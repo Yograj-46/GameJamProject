@@ -20,8 +20,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("health potion"))
-            healthSlider.value += 10;
+        //if (other.gameObject.CompareTag("health potion"))
+        //    healthSlider.value += 10;
     }
     private void Update()
     {

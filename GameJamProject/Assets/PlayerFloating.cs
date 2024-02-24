@@ -35,7 +35,7 @@ public class PlayerFloating : MonoBehaviour
     {
         if (isInWater)
         {
-            animator.SetBool("IsTreadingWater", true);
+           animator.SetBool("IsTreadingWater", true);
             Vector3 newPosition = rb.position + Vector3.up * buoyancyForce * Time.deltaTime;
             rb.MovePosition(newPosition);
         }

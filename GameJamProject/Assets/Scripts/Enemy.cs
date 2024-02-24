@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Chase();
+        //Chase();
         Dead();
     }
 
@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
     
     void Dead(){
         if(health.currentHealth > 0){
-            transform.LookAt(target);
+            //transform.LookAt(target);
         }
     }
 }
