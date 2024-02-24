@@ -1,41 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    [SerializeField] NavMeshAgent enemy;
     [SerializeField] Animator enemyAnim;
     [SerializeField] Transform player;
-    [SerializeField] CharacterController controller;
+    public ThirdPersonCharacter character;
+    
     public float chasingSpeed;
     public bool isChasing;
     public bool isAttacking;
+    public float remainingDist;
     private EnemyHealth health;
     // Start is called before the first frame update
     void Start()
     {
         health = GetComponent<EnemyHealth>();
         enemyAnim = GetComponent<Animator>();
-        controller = GetComponent<CharacterController>();
+        enemy.updateRotation = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Chase();
-        Dead();
+        Chase();
+        //Attack();
     }
 
     void Chase(){
-        enemyAnim.SetBool("Chasing", true);
 
-        Vector3.MoveTowards(transform.position, player.transform.position, chasingSpeed * Time.deltaTime);
+        if(enemy.remainingDistance > enemy.stoppingDistance){
+            enemy.SetDestination(player.position);
+            character.Move(enemy.desiredVelocity, false, false);
+        }
+        else{
+            character.Move(Vector3.zero, false, false);
+        }
     }
+
     
-    void Dead(){
-        if(health.currentHealth > 0){
-            //transform.LookAt(target);
+    void Attack(){
+        if(transform.position.z == player.position.z){
+            isAttacking = true;
+        }
+        else{
+            isAttacking = false;
+        }
+        if(isAttacking){
+            enemyAnim.SetTrigger("Attack1");
         }
     }
 }
