@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa88e71ce3e0d804f8cd28ebdbadc228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 5
   player: {fileID: 0}
   rotationSpeed: 5
 --- !u!1101 &-6786128580932831749
@@ -697,7 +697,7 @@ AnimatorStateMachine:
     m_Position: {x: 100, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4000215284366144122}
-    m_Position: {x: 360, y: 320, z: 0}
+    m_Position: {x: 410, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5608286386846739928}
     m_Position: {x: 190, y: 90, z: 0}
