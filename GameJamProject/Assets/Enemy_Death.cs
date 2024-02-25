@@ -24,8 +24,6 @@ public class Enemy_Death : StateMachineBehaviour
         if (enemyHealth.currentHealth <= 0)
         {
             Debug.Log(enemyHealth.currentHealth);
-            //rb.useGravity = false;
-            //animator.GetComponent<CapsuleCollider>().enabled = false;
             Debug.Log("current health" + enemyHealth.currentHealth);
         }
     }
@@ -33,6 +31,6 @@ public class Enemy_Death : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        Debug.Log("end");
     }
 }

@@ -25,9 +25,11 @@ public class EnemyHealth : MonoBehaviour
         {
             isAlive = false;
             Debug.Log("death");
-            //rb.useGravity = false;
+            rb.useGravity = false;
+            rb.isKinematic = true;
+            rb.freezeRotation = true;
             animator.SetTrigger("Death");
-            animator.GetComponent<CapsuleCollider>().enabled = false;
+           animator.GetComponent<CapsuleCollider>().enabled = false;
         }
 
     }
