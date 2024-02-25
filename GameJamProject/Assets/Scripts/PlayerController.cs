@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator playerAnim;
 
-    [SerializeField] Animator enemyAnim;
+    [SerializeField] EnemyHealth enemyHealth;
 
     //Equip-Unequip parameters
     [SerializeField]
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     private float timeSinceAttack;
     public int currentAttack = 0;
 
-    
+
     //Attack Range
     [SerializeField] Transform attackPoint;
     [SerializeField] float attackRange;
@@ -131,13 +131,26 @@ public class PlayerController : MonoBehaviour
 
 
     }
-    void AttackEnemy(int damage)
+    public void AttackEnemy(int damage)
     {
-        Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
-
-        foreach (Collider col in colInfo)
+        if (enemyHealth.blockCount > 0 && !enemyHealth.isBlocking)
         {
-            col.GetComponent<EnemyHealth>().TakeDamage(damage);
+            enemyHealth.blockCount--;
+            Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
+            foreach (Collider col in colInfo)
+            {
+                col.GetComponent<EnemyHealth>().TakeDamage(damage);
+                if (enemyHealth.blockCount == 0)
+                {
+                    enemyHealth.isBlocking = true;
+                    if (enemyHealth.isBlocking)
+                    {
+                        Animator enemy = col.GetComponent<Animator>();
+                        enemy.SetTrigger("IsBlocking");
+                        damage = 0;
+                    }
+                }
+            }
         }
     }
     void OnDrawGizmosSelected()
@@ -189,9 +202,12 @@ public class PlayerController : MonoBehaviour
 
         foreach (Collider col in colInfo)
         {
-            AttackEnemy(10);
-            Animator animator = col.GetComponent<Animator>();
-            animator.SetTrigger("LightAttack");
+            if (!enemyHealth.isBlocking)
+            {
+                AttackEnemy(10);
+                Animator animator = col.GetComponent<Animator>();
+                animator.SetTrigger("LightAttack");
+            }
         }
     }
     public void HeavyAttackReaction()
@@ -200,9 +216,12 @@ public class PlayerController : MonoBehaviour
 
         foreach (Collider col in colInfo)
         {
-            AttackEnemy(20);
-            Animator animator = col.GetComponent<Animator>();
-            animator.SetTrigger("HeavyAttack");
+            if (!enemyHealth.isBlocking)
+            {
+                AttackEnemy(20);
+                Animator animator = col.GetComponent<Animator>();
+                animator.SetTrigger("HeavyAttack");
+            }
         }
     }
 }

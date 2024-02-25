@@ -5863,6 +5863,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  blockCount: 3
+  isBlocking: 0
   animator: {fileID: 1073947401}
 --- !u!114 &1073947405
 MonoBehaviour:
@@ -17371,7 +17373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnim: {fileID: 6982812146770194008}
-  enemyAnim: {fileID: 1073947401}
+  enemyHealth: {fileID: 1073947403}
   sword: {fileID: 1105181168829142527}
   swordOnShoulder: {fileID: 1469073410}
   isEquipping: 0

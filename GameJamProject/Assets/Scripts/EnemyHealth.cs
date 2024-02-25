@@ -6,7 +6,8 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth = 100;
     public int currentHealth;
-    int blockCount = 3;
+    public int blockCount = 3;
+    public bool isBlocking = false;
     [SerializeField] Animator animator;
     // Start is called before the first frame update
     void Start()
