@@ -12,7 +12,6 @@ public class Enemy : MonoBehaviour
     //public ThirdPersonCharacter character;
     
     public float chasingSpeed;
-    public float chasingRange;
     public bool isChasing;
     public bool isAttacking;
     public float remainingDist;
@@ -28,7 +27,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        IdleToChase();
+        //IdleToChase();
         Chase();
         //Attack();
     }
@@ -42,17 +41,18 @@ public class Enemy : MonoBehaviour
         //else{
         //    character.Move(Vector3.zero, false, false);
         //}
+       
     }
 
-    void IdleToChase()
-    {
-        if (Vector3.Distance(transform.position, player.position) <= chasingRange)
-            enemyAnim.SetTrigger("IsChasing");
+    //void IdleToChase()
+    //{
+    //    if (Vector3.Distance(transform.position, player.position) <= chasingRange)
+    //        enemyAnim.SetTrigger("IsChasing");
 
 
-        if (Vector3.Distance(transform.position, player.position) <= 1)
-            enemyAnim.ResetTrigger("IsChasing");
-    }
+    //    if (Vector3.Distance(transform.position, player.position) <= 1)
+    //        enemyAnim.ResetTrigger("IsChasing");
+    //}
    
     void Attack(){
         if(transform.position.z == player.position.z){

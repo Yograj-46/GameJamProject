@@ -181,6 +181,7 @@ public class PlayerController : MonoBehaviour
     }
     public void LightAttackReaction()
     {
+        
         Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
 
         foreach (Collider col in colInfo)
