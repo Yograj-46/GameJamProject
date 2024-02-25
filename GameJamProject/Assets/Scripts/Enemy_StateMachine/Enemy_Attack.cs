@@ -17,6 +17,7 @@ public class Enemy_Attack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        rb.freezeRotation = true;
         if (Vector3.Distance(player.position, rb.transform.position) >= 2)
         {
             animator.SetTrigger("BackToRun");
@@ -27,6 +28,7 @@ public class Enemy_Attack : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        rb.freezeRotation=false;
         animator.ResetTrigger("BackToRun");
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 //using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Enemy : MonoBehaviour
@@ -9,19 +8,26 @@ public class Enemy : MonoBehaviour
     //[SerializeField] NavMeshAgent enemy;
     [SerializeField] Animator enemyAnim;
     [SerializeField] Transform player;
+    [SerializeField] PlayerController playerController;
     //public ThirdPersonCharacter character;
-    
+
     public float chasingSpeed;
     public bool isChasing;
     public bool isAttacking;
     public float remainingDist;
     private EnemyHealth health;
-    // Start is called before the first frame update
+
+    //Attack Range
+    [SerializeField] Transform attackPoint;
+    [SerializeField] float attackRange;
+    [SerializeField] LayerMask playerMask;
+
     void Start()
     {
+        playerController = player.GetComponent<PlayerController>();
         health = GetComponent<EnemyHealth>();
         enemyAnim = GetComponent<Animator>();
-       // enemy.updateRotation = false;
+        // enemy.updateRotation = false;
     }
 
     // Update is called once per frame
@@ -32,7 +38,8 @@ public class Enemy : MonoBehaviour
         //Attack();
     }
 
-    void Chase(){
+    void Chase()
+    {
 
         //if(enemy.remainingDistance > enemy.stoppingDistance){
         //    enemy.SetDestination(player.position);
@@ -41,7 +48,7 @@ public class Enemy : MonoBehaviour
         //else{
         //    character.Move(Vector3.zero, false, false);
         //}
-       
+
     }
 
     //void IdleToChase()
@@ -53,16 +60,32 @@ public class Enemy : MonoBehaviour
     //    if (Vector3.Distance(transform.position, player.position) <= 1)
     //        enemyAnim.ResetTrigger("IsChasing");
     //}
-   
-    void Attack(){
-        if(transform.position.z == player.position.z){
-            isAttacking = true;
+    
+    public void Attack()
+    {
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, playerMask);
+        Debug.Log("damaging");
+        foreach (Collider col in colInfo)
+        {
+            if (!playerController.isBlocking)
+            {
+                playerHealth.TakeDamage(10);
+                Animator animator = col.GetComponent<Animator>();
+                //animator.SetTrigger("LightAttack");
+            }
+            else if (playerController.isBlocking)
+            {
+                playerHealth.TakeDamage(4);
+                Animator animator = col.GetComponent<Animator>();
+                //animator.SetTrigger("LightAttack");
+            }
         }
-        else{
-            isAttacking = false;
-        }
-        if(isAttacking){
-            enemyAnim.SetTrigger("Attack1");
-        }
+    }
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
