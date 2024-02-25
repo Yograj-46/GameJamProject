@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth = 100;
     public int currentHealth;
+    int blockCount = 3;
     [SerializeField] Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,10 @@ public class EnemyHealth : MonoBehaviour
             animator.SetTrigger("Death");
             animator.GetComponent<CapsuleCollider>().enabled = false;
 
+        }
+        if(blockCount == 0)
+        {
+            animator.SetTrigger("IsBlocking");
         }
     }
 }

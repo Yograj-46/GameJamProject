@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator playerAnim;
 
+    [SerializeField] Animator enemyAnim;
 
     //Equip-Unequip parameters
     [SerializeField]
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
     private float timeSinceAttack;
     public int currentAttack = 0;
 
-
+    
     //Attack Range
     [SerializeField] Transform attackPoint;
     [SerializeField] float attackRange;
@@ -117,6 +118,7 @@ public class PlayerController : MonoBehaviour
             if (currentAttack > 3)
                 currentAttack = 1;
 
+
             //Reset
             if (timeSinceAttack > 1.0f)
                 currentAttack = 1;
@@ -127,7 +129,7 @@ public class PlayerController : MonoBehaviour
             timeSinceAttack = 0;
         }
 
-        
+
     }
     void AttackEnemy(int damage)
     {
@@ -158,13 +160,14 @@ public class PlayerController : MonoBehaviour
             if (currentAttack > 3)
                 currentAttack = 1;
 
+
             //Reset
             if (timeSinceAttack > 1.0f)
                 currentAttack = 1;
 
             //Call Attack Triggers
             playerAnim.SetTrigger("HeavyAttack" + currentAttack);
-            
+
             //Reset Timer
             timeSinceAttack = 0;
         }
@@ -181,7 +184,7 @@ public class PlayerController : MonoBehaviour
     }
     public void LightAttackReaction()
     {
-        
+
         Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
 
         foreach (Collider col in colInfo)

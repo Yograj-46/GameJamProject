@@ -17371,6 +17371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnim: {fileID: 6982812146770194008}
+  enemyAnim: {fileID: 1073947401}
   sword: {fileID: 1105181168829142527}
   swordOnShoulder: {fileID: 1469073410}
   isEquipping: 0
