@@ -1,38 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Idle : StateMachineBehaviour
+public class Enemy_Death : StateMachineBehaviour
 {
-    public Transform player;
     Rigidbody rb;
-    float chasingRange = 5;
+    EnemyHealth enemyHealth;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        Debug.Log("Death");
+       // player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody>();
+        //rb.useGravity = false;
+        enemyHealth = animator.GetComponent<EnemyHealth>();
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        EnemyHealth enemyHealth = animator.GetComponent<EnemyHealth>();
-        if (enemyHealth.isAlive)
+        if (enemyHealth.currentHealth <= 0)
         {
-
-            if (Vector3.Distance(player.position, rb.transform.position) <= chasingRange)
-            {
-                animator.SetTrigger("IsChasing");
-            }
+            Debug.Log(enemyHealth.currentHealth);
+            //rb.useGravity = false;
+            //animator.GetComponent<CapsuleCollider>().enabled = false;
+            Debug.Log("current health" + enemyHealth.currentHealth);
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("IsChasing");
 
     }
-
-
 }

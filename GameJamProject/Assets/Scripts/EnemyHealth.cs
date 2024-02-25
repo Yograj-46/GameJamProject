@@ -6,28 +6,29 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth = 100;
     public int currentHealth;
-    public int blockCount = 3;
+    public int blockCount = 4;
     public bool isBlocking = false;
+    public bool isAlive = true;
     [SerializeField] Animator animator;
+    Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        rb = GetComponent<Rigidbody>();
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log(currentHealth + "enemyHealth");
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
+            isAlive = false;
+            Debug.Log("death");
+            //rb.useGravity = false;
             animator.SetTrigger("Death");
             animator.GetComponent<CapsuleCollider>().enabled = false;
+        }
 
-        }
-        if(blockCount == 0)
-        {
-            animator.SetTrigger("IsBlocking");
-        }
     }
 }
