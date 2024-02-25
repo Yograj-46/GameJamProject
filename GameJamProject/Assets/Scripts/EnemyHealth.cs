@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -26,10 +24,10 @@ public class EnemyHealth : MonoBehaviour
             isAlive = false;
             Debug.Log("death");
             rb.useGravity = false;
-            rb.isKinematic = true;
             rb.freezeRotation = true;
+            rb.isKinematic = true;
             animator.SetTrigger("Death");
-           animator.GetComponent<CapsuleCollider>().enabled = false;
+            animator.GetComponent<CapsuleCollider>().enabled = false;
         }
 
     }
