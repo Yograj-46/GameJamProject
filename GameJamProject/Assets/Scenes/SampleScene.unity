@@ -16488,6 +16488,10 @@ PrefabInstance:
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1073947405, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: chasingSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073947405, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
       propertyPath: playerMask.m_Bits
       value: 256
       objectReference: {fileID: 0}
