@@ -11,7 +11,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] Animator animator;
     Rigidbody rb;
 
-    [Header ("Enemy Health Bar")]
+    [Header ("Enemy Health Bar Reference")]
     public Slider healthSlider;
 
     // Start is called before the first frame update
@@ -38,17 +38,16 @@ public class EnemyHealth : MonoBehaviour
             animator.SetTrigger("Death");
             animator.GetComponent<CapsuleCollider>().enabled = false;
         }
-
     }
 
     //To set maximum value of the slider
-    private void SetMaxHealth(float health){
+    public void SetMaxHealth(float health){
         healthSlider.maxValue = health;
         healthSlider.value = health;
     }
     
     //To set current health  of the enemy in slider
-    private void SetHealth(int health){
+    public void SetHealth(int health){
         healthSlider.value = health;
     }
 }
