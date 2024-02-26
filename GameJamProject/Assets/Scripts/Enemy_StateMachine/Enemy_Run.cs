@@ -3,6 +3,7 @@ using UnityEngine;
 public class Enemy_Run : StateMachineBehaviour
 {
     public float speed = 5f;
+    public float attackRange;
     public Transform player;
     Rigidbody rb;
     public float rotationSpeed = 5f;
@@ -29,8 +30,7 @@ public class Enemy_Run : StateMachineBehaviour
             targetPosition.y = rb.transform.position.y;
 
             rb.MovePosition(Vector3.MoveTowards(rb.transform.position, targetPosition, speed * Time.deltaTime));
-
-            if (Vector3.Distance(targetPosition, rb.transform.position) <= 1)
+            if (Vector3.Distance(targetPosition, rb.transform.position) <= attackRange)
             {
                 animator.SetTrigger("Attack1");
             }

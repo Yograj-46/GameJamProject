@@ -27,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
         SetHealth(currentHealth); //Current health of enemy
-        
+        blockCount--;
         if (currentHealth <= 0)
         {
             isAlive = false;

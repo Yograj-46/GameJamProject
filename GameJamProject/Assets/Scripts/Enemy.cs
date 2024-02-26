@@ -67,7 +67,6 @@ public class Enemy : MonoBehaviour
     {
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
         Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, playerMask);
-        Debug.Log("damaging");
         foreach (Collider col in colInfo)
         {
             if (!playerController.isBlocking)

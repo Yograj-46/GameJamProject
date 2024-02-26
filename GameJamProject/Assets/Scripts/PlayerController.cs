@@ -135,7 +135,6 @@ public class PlayerController : MonoBehaviour
     {
         if (enemyHealth.blockCount > 0 && !enemyHealth.isBlocking)
         {
-            enemyHealth.blockCount--;
             Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
             foreach (Collider col in colInfo)
             {
@@ -153,12 +152,12 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null)
-            return;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
+    //void OnDrawGizmosSelected()
+    //{
+    //    if (attackPoint == null)
+    //        return;
+    //    Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    //}
     private void HeavyAttack()
     {
 
@@ -207,6 +206,7 @@ public class PlayerController : MonoBehaviour
                 AttackEnemy(10);
                 Animator animator = col.GetComponent<Animator>();
                 animator.SetTrigger("LightAttack");
+                Debug.Log(animator.name);
             }
         }
     }
@@ -221,6 +221,8 @@ public class PlayerController : MonoBehaviour
                 AttackEnemy(20);
                 Animator animator = col.GetComponent<Animator>();
                 animator.SetTrigger("HeavyAttack");
+                Debug.Log(animator.name);
+
             }
         }
     }
