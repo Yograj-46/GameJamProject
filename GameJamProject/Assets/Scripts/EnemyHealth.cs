@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         SetMaxHealth(maxHealth); //Max health at starting
         rb = GetComponent<Rigidbody>();

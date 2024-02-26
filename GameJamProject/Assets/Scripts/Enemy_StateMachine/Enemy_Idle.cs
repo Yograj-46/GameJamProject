@@ -4,23 +4,23 @@ public class Enemy_Idle : StateMachineBehaviour
 {
     public Transform player;
     Rigidbody rb;
-    float chasingRange = 5;
-
+    EnemyHealth enemyHealth;
+    Enemy enemy;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody>();
+        enemyHealth = animator.GetComponent<EnemyHealth>();
+        enemy = animator.GetComponent<Enemy>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        EnemyHealth enemyHealth = animator.GetComponent<EnemyHealth>();
         if (enemyHealth.isAlive)
         {
-
-            if (Vector3.Distance(player.position, rb.transform.position) <= chasingRange)
+            if (Vector3.Distance(player.position, rb.transform.position) <= enemy.chaseRange)
             {
                 animator.SetTrigger("IsChasing");
             }

@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float attackRange;
     [SerializeField] LayerMask playerMask;
 
+    //Chase Range
+    public float chaseRange = 5;
     void Start()
     {
         playerController = player.GetComponent<PlayerController>();

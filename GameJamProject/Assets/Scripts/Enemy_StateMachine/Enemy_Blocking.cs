@@ -24,6 +24,7 @@ public class Enemy_Blocking : StateMachineBehaviour
             targetDirection.y = 0f;
             Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
             rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRotation, 5 * Time.deltaTime));
+
         }
     }
 
@@ -34,6 +35,8 @@ public class Enemy_Blocking : StateMachineBehaviour
         rb.isKinematic = false;
         enemyHealth.blockCount = 4;
         enemyHealth.isBlocking = false;
+        Enemy enemy = animator.GetComponent<Enemy>();
+        enemy.chaseRange = Mathf.Infinity;
     }
 
 }
