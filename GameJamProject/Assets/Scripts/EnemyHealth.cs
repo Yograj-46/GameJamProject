@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -9,19 +10,27 @@ public class EnemyHealth : MonoBehaviour
     public bool isAlive = true;
     [SerializeField] Animator animator;
     Rigidbody rb;
+
+    [Header ("Enemy Health Bar")]
+    public Slider healthSlider;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        SetMaxHealth(maxHealth); //Max health at starting
         rb = GetComponent<Rigidbody>();
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        SetHealth(currentHealth); //Current health of enemy
+        
         if (currentHealth <= 0)
         {
             isAlive = false;
+            healthSlider.gameObject.SetActive(false);
             Debug.Log("death");
             rb.useGravity = false;
             rb.freezeRotation = true;
@@ -30,5 +39,16 @@ public class EnemyHealth : MonoBehaviour
             animator.GetComponent<CapsuleCollider>().enabled = false;
         }
 
+    }
+
+    //To set maximum value of the slider
+    private void SetMaxHealth(float health){
+        healthSlider.maxValue = health;
+        healthSlider.value = health;
+    }
+    
+    //To set current health  of the enemy in slider
+    private void SetHealth(int health){
+        healthSlider.value = health;
     }
 }
