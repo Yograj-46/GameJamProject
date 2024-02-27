@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         timeSinceAttack += Time.deltaTime;
-
+        CheckEnemy();
         LightAttack();
         HeavyAttack();
 
@@ -45,7 +45,15 @@ public class PlayerController : MonoBehaviour
         Block();
         Kick();
     }
+    public void CheckEnemy()
+    {
+        Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
+        foreach (Collider col in colInfo)
+        {
+            enemyHealth =col.GetComponent<EnemyHealth>();
+        }
 
+    }
     private void Equip()
     {
         if (Input.GetKeyDown(KeyCode.R) && playerAnim.GetBool("Grounded"))
@@ -206,7 +214,6 @@ public class PlayerController : MonoBehaviour
                 AttackEnemy(10);
                 Animator animator = col.GetComponent<Animator>();
                 animator.SetTrigger("LightAttack");
-                Debug.Log(animator.name);
             }
         }
     }
@@ -221,8 +228,6 @@ public class PlayerController : MonoBehaviour
                 AttackEnemy(20);
                 Animator animator = col.GetComponent<Animator>();
                 animator.SetTrigger("HeavyAttack");
-                Debug.Log(animator.name);
-
             }
         }
     }

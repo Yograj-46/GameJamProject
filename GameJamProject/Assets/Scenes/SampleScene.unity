@@ -5924,18 +5924,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071722795}
   m_CullTransparentMesh: 1
---- !u!114 &1073947403 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1073947403, guid: aef9a3e063e740f4d8100584de73ceb4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1960327660}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afaf0cb6f5dab1d49b4fe582044315d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1091146785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16468,6 +16456,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 3893294198320329762}
+    - target: {fileID: 1073947405, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: enemyAnim
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4,
         type: 3}
       propertyPath: m_Name
@@ -17063,7 +17055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnim: {fileID: 6982812146770194008}
-  enemyHealth: {fileID: 1073947403}
+  enemyHealth: {fileID: 0}
   sword: {fileID: 1105181168829142527}
   swordOnShoulder: {fileID: 1469073410}
   isEquipping: 0
