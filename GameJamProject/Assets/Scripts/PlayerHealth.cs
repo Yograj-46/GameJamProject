@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public Slider damageSlider;
     float speed = 0.5f;
     int maxHealth = 100, minHealth = 1;
+    Animator animator;
 
 
     private void Start()
@@ -14,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.value = maxHealth;
         healthSlider.maxValue = maxHealth;
         damageSlider.maxValue = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -25,7 +27,11 @@ public class PlayerHealth : MonoBehaviour
         if (healthSlider.value < minHealth)
             PlayerOut();
 
+        if (Input.GetKey(KeyCode.P))
+            animator.SetTrigger("Picking");
+
     }
+    
     public void TakeDamage(int damage)
     {
         healthSlider.value -= damage;
