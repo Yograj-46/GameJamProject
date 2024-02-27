@@ -3990,7 +3990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665126738bedc4f4591de6ed1b52e3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAnim: {fileID: 4414871117303439920}
+  enemyAnim: {fileID: 0}
   player: {fileID: 0}
   playerController: {fileID: 0}
   chasingSpeed: 3
