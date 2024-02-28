@@ -16,7 +16,7 @@ public class Enemy_Blocking : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (enemyHealth.isAlive && enemyHealth.currentHealth >0)
+        if (enemyHealth.isAlive && enemyHealth.currentHealth > 0)
         {
             rb.useGravity = false;
             rb.isKinematic = true;
