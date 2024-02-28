@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public Slider healthSlider;
     public Slider damageSlider;
+    public GameObject healthCircle;
     float speed = 0.5f;
     int maxHealth = 100, minHealth = 1;
     Animator animator;
@@ -20,7 +21,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-
         if (healthSlider.value != damageSlider.value)
             damageSlider.value -= speed;
 
@@ -36,8 +36,18 @@ public class PlayerHealth : MonoBehaviour
     {
         healthSlider.value -= damage;
     }
+
     void PlayerOut()
     {
         // death screen and reload scene
+        if(healthSlider.value == 0){
+            animator.SetTrigger("Death");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other){
+        if(other.gameObject.CompareTag("HealingCircle") && healthSlider.value != maxHealth){
+            healthSlider.value += maxHealth;
+        }
     }
 }

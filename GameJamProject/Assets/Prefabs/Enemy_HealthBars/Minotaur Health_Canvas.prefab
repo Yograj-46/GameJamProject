@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 6535761407609975359}
   - component: {fileID: 3133015797482564291}
   m_Layer: 5
-  m_Name: Enemy Health_Canvas
+  m_Name: Minotaur Health_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3133015797482564291
 MonoBehaviour:
   m_ObjectHideFlags: 0

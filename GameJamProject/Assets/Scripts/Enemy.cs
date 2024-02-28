@@ -35,33 +35,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //IdleToChase();
-        Chase();
-        //Attack();
+        
     }
-
-    void Chase()
-    {
-
-        //if(enemy.remainingDistance > enemy.stoppingDistance){
-        //    enemy.SetDestination(player.position);
-        //    character.Move(player.position, false, false);
-        //}
-        //else{
-        //    character.Move(Vector3.zero, false, false);
-        //}
-
-    }
-
-    //void IdleToChase()
-    //{
-    //    if (Vector3.Distance(transform.position, player.position) <= chasingRange)
-    //        enemyAnim.SetTrigger("IsChasing");
-
-
-    //    if (Vector3.Distance(transform.position, player.position) <= 1)
-    //        enemyAnim.ResetTrigger("IsChasing");
-    //}
     
     public void Attack()
     {
@@ -72,14 +47,10 @@ public class Enemy : MonoBehaviour
             if (!playerController.isBlocking)
             {
                 playerHealth.TakeDamage(10);
-                Animator animator = col.GetComponent<Animator>();
-                //animator.SetTrigger("LightAttack");
             }
             else if (playerController.isBlocking)
             {
                 playerHealth.TakeDamage(4);
-                Animator animator = col.GetComponent<Animator>();
-                //animator.SetTrigger("LightAttack");
             }
         }
     }

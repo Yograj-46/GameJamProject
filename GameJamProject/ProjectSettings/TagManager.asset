@@ -8,6 +8,7 @@ TagManager:
   - Weapon
   - Water
   - EnemyTarget
+  - HealingCircle
   layers:
   - Default
   - TransparentFX

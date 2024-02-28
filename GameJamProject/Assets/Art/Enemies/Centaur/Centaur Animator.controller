@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  attackRange: 0
+  attackRange: 1
   player: {fileID: 0}
   rotationSpeed: 5
 --- !u!1102 &2711521679803881089
