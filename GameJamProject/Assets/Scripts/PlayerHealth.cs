@@ -21,8 +21,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        if (healthSlider.value != damageSlider.value)
-            damageSlider.value -= speed;
+        UpdateDamage();
 
         if (healthSlider.value < minHealth)
             PlayerOut();
@@ -31,7 +30,13 @@ public class PlayerHealth : MonoBehaviour
             animator.SetTrigger("Picking");
 
     }
-    
+
+    private void UpdateDamage()
+    {
+        if (healthSlider.value != damageSlider.value)
+            damageSlider.value -= speed;
+    }
+
     public void TakeDamage(int damage)
     {
         healthSlider.value -= damage;
@@ -45,9 +50,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other){
+    private void OnTriggerStay(Collider other){
         if(other.gameObject.CompareTag("HealingCircle") && healthSlider.value != maxHealth){
-            healthSlider.value += maxHealth;
+            healthSlider.value += speed;
         }
+        if(healthSlider.value == maxHealth)
+            damageSlider.value = maxHealth;
     }
 }
