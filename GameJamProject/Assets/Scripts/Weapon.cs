@@ -25,7 +25,6 @@ public class Weapon : MonoBehaviour
             isEquiped=true;
             gameObject.SetActive(false);
             //controller.sword.SetActive(true);
-
         }
     }
     

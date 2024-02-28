@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float attackRange;
     [SerializeField] LayerMask enemyMask;
 
+
     private void Update()
     {
         timeSinceAttack += Time.deltaTime;
@@ -133,6 +134,7 @@ public class PlayerController : MonoBehaviour
 
             //Call Attack Triggers
             playerAnim.SetTrigger("LightAttack" + currentAttack);
+
             //Reset Timer
             timeSinceAttack = 0;
         }

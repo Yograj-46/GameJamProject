@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Enemy : MonoBehaviour
 {
@@ -24,6 +23,9 @@ public class Enemy : MonoBehaviour
 
     //Chase Range
     public float chaseRange = 5;
+
+    //Particle after death
+    public ParticleSystem deadParticle;
     void Start()
     {
         playerController = player.GetComponent<PlayerController>();
@@ -35,7 +37,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        StartCoroutine("AfterEffects");
     }
     
     public void Attack()
@@ -59,5 +61,14 @@ public class Enemy : MonoBehaviour
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    IEnumerator AfterEffects(){
+        if(!health.isAlive){
+            yield return new WaitForSeconds(2.5f);
+            deadParticle.gameObject.SetActive(true);
+            yield return new WaitForSeconds(10.0f);
+            Destroy(gameObject);
+        }
     }
 }

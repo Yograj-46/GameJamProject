@@ -16555,14 +16555,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 3893294198320329762}
-    - target: {fileID: 1073947405, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
-      propertyPath: enemyAnim
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1073947405, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
-      propertyPath: chaseRange
-      value: 7.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4,
         type: 3}
       propertyPath: m_Name
@@ -16622,11 +16614,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944725315121531021, guid: aef9a3e063e740f4d8100584de73ceb4,
-        type: 3}
-      propertyPath: camTarget
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7624933415505914952, guid: aef9a3e063e740f4d8100584de73ceb4,
         type: 3}
@@ -16985,11 +16972,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 3893294198320329762}
-    - target: {fileID: 7119364552427900143, guid: 3fe3cd0635b9daf4db83797f690eb2dc,
-        type: 3}
-      propertyPath: chaseRange
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7119364552741958537, guid: 3fe3cd0635b9daf4db83797f690eb2dc,
         type: 3}
       propertyPath: m_RootOrder
@@ -17139,6 +17121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerArmature
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442508359774645683, guid: 0f7b328665fa7cd468198dfedefda492,
+        type: 3}
+      propertyPath: swordTrail
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f7b328665fa7cd468198dfedefda492, type: 3}
