@@ -98,6 +98,9 @@ namespace StarterAssets
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
 
+        // Player Health
+        PlayerHealth playerHealth;
+
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
 #endif
@@ -128,6 +131,7 @@ namespace StarterAssets
 
         private void Awake()
         {
+            playerHealth = GetComponent<PlayerHealth>();
             playerController = gameObject.GetComponent<PlayerController>();
 
 
@@ -219,7 +223,7 @@ namespace StarterAssets
 
         private void Move()
         {
-            if (playerController.isEquipping || playerController.isBlocking || playerController.isKicking || playerController.isAttacking)
+            if (playerController.isEquipping || playerController.isBlocking || playerController.isKicking || playerController.isAttacking || !playerHealth.isAlive)
                 return;
 
 

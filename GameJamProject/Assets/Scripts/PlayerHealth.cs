@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     float speed = 0.5f;
     int maxHealth = 100, minHealth = 1;
     Animator animator;
+    public bool isAlive = true;
 
 
     private void Start()
@@ -26,8 +27,7 @@ public class PlayerHealth : MonoBehaviour
         if (healthSlider.value < minHealth)
             PlayerOut();
 
-        if (Input.GetKey(KeyCode.P))
-            animator.SetTrigger("Picking");
+        
 
     }
 
@@ -46,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
     {
         // death screen and reload scene
         if(healthSlider.value == 0){
+            isAlive = false;
             animator.SetTrigger("Death");
         }
     }

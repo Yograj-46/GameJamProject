@@ -7,11 +7,13 @@ public class Enemy_Run : StateMachineBehaviour
     public Transform player;
     Rigidbody rb;
     public float rotationSpeed = 5f;
+    PlayerHealth playerHealth;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerHealth = player.GetComponent<PlayerHealth>();
         rb = animator.GetComponent<Rigidbody>();
     }
 
@@ -19,7 +21,7 @@ public class Enemy_Run : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         EnemyHealth enemyHealth = animator.GetComponent<EnemyHealth>();
-        if (enemyHealth.isAlive)
+        if (enemyHealth.isAlive && playerHealth.isAlive)
         {
             Vector3 targetDirection = player.position - rb.transform.position;
             targetDirection.y = 0f;

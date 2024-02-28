@@ -4,12 +4,15 @@ public class Enemy_Attack : StateMachineBehaviour
 {
     public Transform player;
     Rigidbody rb;
+    PlayerHealth playerHealth;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody>();
+        playerHealth = player.GetComponent<PlayerHealth>();
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -18,11 +21,14 @@ public class Enemy_Attack : StateMachineBehaviour
 
         rb.constraints = RigidbodyConstraints.FreezeRotation;
 
-        if (Vector3.Distance(player.position, rb.transform.position) >= 2)
+        if (Vector3.Distance(player.position, rb.transform.position) >= 2 && playerHealth.isAlive)
         {
             animator.SetTrigger("BackToRun");
         }
-
+        if (!playerHealth.isAlive)
+        {
+            animator.SetTrigger("Idle");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -30,5 +36,6 @@ public class Enemy_Attack : StateMachineBehaviour
     {
         rb.constraints &= ~RigidbodyConstraints.FreezeRotationY;
         animator.ResetTrigger("BackToRun");
+        animator.ResetTrigger("Idle");
     }
 }

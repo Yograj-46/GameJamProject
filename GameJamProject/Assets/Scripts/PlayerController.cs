@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     public bool isEquipping;
     public bool isEquipped;
 
-
     //Blocking Parameters
     public bool isBlocking;
 
@@ -34,14 +33,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float attackRange;
     [SerializeField] LayerMask enemyMask;
 
-
+    // Player Health
+    PlayerHealth playerHealth;
+    private void Start()
+    {
+        playerHealth = GetComponent<PlayerHealth>();
+    }
     private void Update()
     {
         timeSinceAttack += Time.deltaTime;
         CheckEnemy();
         LightAttack();
         HeavyAttack();
-
+        PickUpObjects();
         Equip();
         Block();
         Kick();
@@ -55,9 +59,14 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    void PickUpObjects()
+    {
+        if (Input.GetKey(KeyCode.P) && playerHealth.isAlive)
+            playerAnim.SetTrigger("Picking");
+    }
     private void Equip()
     {
-        if (Input.GetKeyDown(KeyCode.R) && playerAnim.GetBool("Grounded"))
+        if (Input.GetKeyDown(KeyCode.R) && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
         {
             isEquipping = true;
             playerAnim.SetTrigger("Equip");
@@ -87,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     private void Block()
     {
-        if (Input.GetKey(KeyCode.Q) && playerAnim.GetBool("Grounded"))
+        if (Input.GetKey(KeyCode.Q) && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
         {
             playerAnim.SetBool("Block", true);
             isBlocking = true;
@@ -101,7 +110,7 @@ public class PlayerController : MonoBehaviour
 
     public void Kick()
     {
-        if (Input.GetKey(KeyCode.LeftControl) && playerAnim.GetBool("Grounded"))
+        if (Input.GetKey(KeyCode.LeftControl) && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
         {
             playerAnim.SetBool("Kick", true);
             isKicking = true;
@@ -116,7 +125,7 @@ public class PlayerController : MonoBehaviour
     private void LightAttack()
     {
 
-        if (Input.GetMouseButtonDown(0) && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f)
+        if (Input.GetMouseButtonDown(0) && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && playerHealth.isAlive)
         {
             if (!isEquipped)
                 return;
@@ -143,7 +152,7 @@ public class PlayerController : MonoBehaviour
     }
     public void AttackEnemy(int damage)
     {
-        if (enemyHealth.blockCount > 0 && !enemyHealth.isBlocking)
+        if (enemyHealth.blockCount > 0 && !enemyHealth.isBlocking && playerHealth.isAlive)
         {
             Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
             foreach (Collider col in colInfo)
@@ -171,7 +180,7 @@ public class PlayerController : MonoBehaviour
     private void HeavyAttack()
     {
 
-        if (Input.GetMouseButtonDown(1) && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f)
+        if (Input.GetMouseButtonDown(1) && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && playerHealth.isAlive)
         {
             if (!isEquipped)
                 return;
