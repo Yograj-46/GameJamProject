@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
         {
             if (!playerController.isBlocking)
             {
-                playerHealth.TakeDamage(10);
+                playerHealth.TakeDamage(5);
             }
             else if (playerController.isBlocking)
             {
