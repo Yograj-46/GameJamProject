@@ -16508,6 +16508,21 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 3893294198320329766}
+    - target: {fileID: 1501926322625704506, guid: aef9a3e063e740f4d8100584de73ceb4,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501926322625704506, guid: aef9a3e063e740f4d8100584de73ceb4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 3859272100752805590, guid: aef9a3e063e740f4d8100584de73ceb4,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4,
         type: 3}
       propertyPath: m_Name
@@ -16566,6 +16581,11 @@ PrefabInstance:
     - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624933415505914952, guid: aef9a3e063e740f4d8100584de73ceb4,
+        type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7624933415505914952, guid: aef9a3e063e740f4d8100584de73ceb4,
