@@ -11,9 +11,12 @@ public class PlayerHealth : MonoBehaviour
     Animator animator;
     public bool isAlive = true;
 
+    //damage
+    public GameObject Blood;
+    public GameObject Player;
     public Image overlay;
     public float overlaySpeed=1f;
-    float temp_A=0;
+    public float temp_A=0;
 
 
     private void Start()
@@ -23,7 +26,31 @@ public class PlayerHealth : MonoBehaviour
         damageSlider.maxValue = maxHealth;
         animator = GetComponent<Animator>();
     }
+    void lowHealthDecrese()
+    {
+        Debug.Log("-");
+        /*
+        temp_A -= overlaySpeed;
+        overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, temp_A);
+        if(temp_A != 0)
+        {
+            lowHealthDecrese();
+        }
+        */
+    }
 
+    void lowHealthIncrese()
+    {
+        Debug.Log("+");
+        /*
+        temp_A += overlaySpeed;
+        overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, temp_A);
+        if(temp_A != 0)
+        {
+            lowHealthIncrese();
+        }
+        */
+    }
     private void Update()
     {
         UpdateDamage();
@@ -34,16 +61,13 @@ public class PlayerHealth : MonoBehaviour
 
         if(isLowhealth && isAlive)
         {
-            if(temp_A<100)
-            {
-                temp_A += Time.deltaTime*overlaySpeed;Debug.Log("+");
-            }
-            else
-            {
-                temp_A -= Time.deltaTime * overlaySpeed;Debug.Log("-");
-            }
-            
-            overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, temp_A);
+            /*
+            if(temp_A>=100)
+                lowHealthDecrese(); 
+            if(temp_A<=0)
+                lowHealthIncrese();
+            */
+            Debug.Log("I will change after");
         }
         else
         {

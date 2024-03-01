@@ -6578,7 +6578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &1596370081
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -11367,7 +11367,7 @@ Transform:
   m_GameObject: {fileID: 1596370080}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 390.9, y: 14, z: 427.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1929146906}
@@ -11740,7 +11740,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 11
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17478,6 +17478,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.minColor.r
       value: 0.3959772
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602224621688425459, guid: 0f7b328665fa7cd468198dfedefda492,
+        type: 3}
+      propertyPath: temp_A
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1602224621688425459, guid: 0f7b328665fa7cd468198dfedefda492,
         type: 3}
