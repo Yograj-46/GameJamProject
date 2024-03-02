@@ -45,7 +45,7 @@ public class Orb : MonoBehaviour
     }
 
     IEnumerator DestroyItself(){
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         Destroy(gameObject);
     }
 }

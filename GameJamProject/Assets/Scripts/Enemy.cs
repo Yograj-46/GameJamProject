@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
     public ParticleSystem deadParticle;
     void Start()
     {
+        player = GameObject.Find("Player").transform;
         playerController = player.GetComponent<PlayerController>();
         health = GetComponent<EnemyHealth>();
         enemyAnim = GetComponent<Animator>();
