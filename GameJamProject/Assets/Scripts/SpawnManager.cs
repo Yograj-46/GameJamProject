@@ -4,34 +4,26 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject orbs;
+    public GameObject[] orbs;
+    public Vector3[] spawnPositions;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("InstantiateOrbs", 2.5f, 10f);
+        InvokeRepeating("InstantiateOrbs", 2.5f, 2f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        DestroyOrbs();
-        StartCoroutine("DestroyOrbs");
+        
     }
     void InstantiateOrbs(){
-        Instantiate(orbs, GenerateRandomPosition(), orbs.transform.rotation);
+        int index = Random.Range(0, orbs.Length);
+        Instantiate(orbs[index], GenerateRandomPosition(), orbs[index].transform.rotation);
     }
 
     private Vector3 GenerateRandomPosition(){
-
-        float xPosition = Random.Range(180, 220);
-        float zPosition = Random.Range(180, 210);
-
-        Vector3 randomPos = new (xPosition, 2.5f, zPosition);
+        Vector3 randomPos = spawnPositions[Random.Range(0, spawnPositions.Length)];
         return randomPos;
-    }
-
-    IEnumerator DestroyOrbs(){
-        yield return new WaitForSeconds(5f);
-        Destroy(orbs);
     }
 }

@@ -8,7 +8,7 @@ public class Orb : MonoBehaviour
     public Transform player;
     public float range;
     public float distance;
-    public Button summoningButton;
+    public GameObject summoningButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,24 +19,33 @@ public class Orb : MonoBehaviour
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        summoningButton = GameObject.Find("Summoning_Button");
         distance = Vector3.Distance(player.position, transform.position);
+        Vector3 target = (player.position - transform.position).normalized;
+        
         if(distance <= range){
-            summoningButton.gameObject.SetActive(true); //Enable button when player is close to the orb
+            Debug.Log("Within the range");
+            //summoningButton.gameObject.SetActive(true); //Enable button when player is close to the orb
+            if(Input.GetKey(KeyCode.M)){
+                transform.Translate(target * 5 * Time.deltaTime);
+            }
         }
         else{
-            summoningButton.gameObject.SetActive(false); //Disable button when player goes far from orb
+            Debug.Log("Outside range");
+            //summoningButton.gameObject.SetActive(false); //Disable button when player goes far from orb
         }
 
-    }
-
-    public void MoveOrb(){
-        transform.LookAt(player);
-        transform.Translate(Vector3.forward * 2.5f * Time.deltaTime);
+        StartCoroutine("DestroyItself");
     }
 
     private void OnTriggerEnter(Collider other){
         if(other.gameObject.name == "Player"){
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator DestroyItself(){
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
     }
 }

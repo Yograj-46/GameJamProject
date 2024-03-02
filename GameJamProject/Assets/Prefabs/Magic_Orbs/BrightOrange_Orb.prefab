@@ -9689,7 +9689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  range: 0
+  range: 30
   distance: 0
   summoningButton: {fileID: 0}
 --- !u!1 &4304459649411516597
