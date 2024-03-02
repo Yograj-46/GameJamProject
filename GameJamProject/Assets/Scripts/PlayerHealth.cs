@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.maxValue = maxHealth;
         damageSlider.maxValue = maxHealth;
         animator = GetComponent<Animator>();
+        overlay= GetComponent<Image>();
     }
     void lowHealthDecrese()
     {
