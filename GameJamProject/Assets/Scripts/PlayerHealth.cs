@@ -1,4 +1,7 @@
+using Cinemachine.PostFX;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -12,46 +15,49 @@ public class PlayerHealth : MonoBehaviour
     public bool isAlive = true;
 
     //damage
-    public GameObject Blood;
-    public GameObject Player;
-    public Image overlay;
-    public float overlaySpeed=1f;
-    public float temp_A=0;
+    /*
+    public CinemachineVolumeSettings volumeSettings;
+    public Vignette vig;
+    public float inten=0;
 
 
+
+    public IEnumerator lowHealth()
+    {
+        if (healthSlider.value <= 12)
+        {
+            vig.enabled.Override(true);
+            if (vig.intensity < 0.375)
+            {
+                inten = 0;
+                while (vig.intensity > 0.51)
+                {
+                    inten += 0.1f;
+                    vig.intensity.Override(inten);
+                    yield return new WaitForSeconds(0.1f);
+                }
+                vig.intensity.Override(0.374f);
+                yield return new WaitForSeconds(0.1f);
+            }
+            yield return new WaitForSeconds(0.1f);
+
+        }
+        else
+        {
+            vig.enabled.Override(false);
+            yield return null;
+        }
+    }
+    */
     private void Start()
     {
         healthSlider.value = maxHealth;
         healthSlider.maxValue = maxHealth;
         damageSlider.maxValue = maxHealth;
         animator = GetComponent<Animator>();
-        overlay= GetComponent<Image>();
     }
-    void lowHealthDecrese()
-    {
-        Debug.Log("-");
-        /*
-        temp_A -= overlaySpeed;
-        overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, temp_A);
-        if(temp_A != 0)
-        {
-            lowHealthDecrese();
-        }
-        */
-    }
+    
 
-    void lowHealthIncrese()
-    {
-        Debug.Log("+");
-        /*
-        temp_A += overlaySpeed;
-        overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, temp_A);
-        if(temp_A != 0)
-        {
-            lowHealthIncrese();
-        }
-        */
-    }
     private void Update()
     {
         UpdateDamage();
@@ -60,20 +66,7 @@ public class PlayerHealth : MonoBehaviour
         if (healthSlider.value < minHealth)
             PlayerOut();
 
-        if(isLowhealth && isAlive)
-        {
-            /*
-            if(temp_A>=100)
-                lowHealthDecrese(); 
-            if(temp_A<=0)
-                lowHealthIncrese();
-            */
-            Debug.Log("I will change after");
-        }
-        else
-        {
-            overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
-        }
+        //StartCoroutine(lowHealth());
 
     }
 
