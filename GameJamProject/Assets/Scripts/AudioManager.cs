@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip heartBeatfx,attack,hit;
+    public AudioClip heartBeatfx,attack,hit,swordDraw,swordKeep,whip;
     public static AudioManager instance;
 
 
@@ -19,21 +19,9 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    private void Update()
+    public void clip(AudioClip audio)
     {
-        /*
-        if(healthSlider.value<=12)
-        {
-            audioSource.clip = heartBeatfx;
-            audioSource.Play();
-        }
-        */
-    }
-
-    public void lightAttackSFX()
-    {
-        audioSource.clip = attack;
-        audioSource.loop = false;
+        audioSource.clip = audio;
         audioSource.Play();
     }
 

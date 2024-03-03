@@ -49350,7 +49350,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -49463,6 +49463,9 @@ MonoBehaviour:
   heartBeatfx: {fileID: 8300000, guid: a944da0b561ce3c45899c952aac2c4e8, type: 3}
   attack: {fileID: 8300000, guid: bf1c4ca4407a11943850550e9ebc820f, type: 3}
   hit: {fileID: 8300000, guid: fd966509a0a84e34ba596216eaec00ed, type: 3}
+  swordDraw: {fileID: 8300000, guid: dada7b6c139ee7748bf4c4040165bb9b, type: 3}
+  swordKeep: {fileID: 8300000, guid: cbd7f7e05caae6e4cb5dad46621bfd75, type: 3}
+  whip: {fileID: 8300000, guid: c1eb1b8866675f24c8b54aaf4cdb1c26, type: 3}
 --- !u!1 &1489621622
 GameObject:
   m_ObjectHideFlags: 0
