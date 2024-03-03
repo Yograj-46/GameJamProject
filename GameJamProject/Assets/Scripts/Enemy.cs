@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
             }
             else if (playerController.isBlocking)
             {
-                playerHealth.TakeDamage(4);
+                playerHealth.TakeDamage(10);
             }
         }
     }
