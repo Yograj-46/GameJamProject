@@ -6961,7 +6961,28 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1091146785}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &905697810
+--- !u!95 &905697808
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905697807}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14f7f5ab67c6fb645b7c5e7d0209a45a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &905697809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6970,14 +6991,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 905697807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 449ef5ebbe24720439ec31d15f7b6f3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FocusTracksTarget: 0
-  m_FocusTracking: 0
-  m_FocusTarget: {fileID: 0}
-  m_FocusOffset: 0
-  m_Profile: {fileID: 11400000, guid: d2877b3805d403f45b748c9fd9ef2220, type: 2}
+  m_IsGlobal: 1
+  priority: 1
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 2e3bdf03ae0007f4ca1ae37f4832cca4, type: 2}
 --- !u!850595691 &1006593007
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -8308,7 +8329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1596370081
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -19535,6 +19556,11 @@ PrefabInstance:
       propertyPath: temp_A
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1602224621688425459, guid: 0f7b328665fa7cd468198dfedefda492,
+        type: 3}
+      propertyPath: volume
+      value: 
+      objectReference: {fileID: 905697809}
     - target: {fileID: 1602224621688425459, guid: 0f7b328665fa7cd468198dfedefda492,
         type: 3}
       propertyPath: overlay

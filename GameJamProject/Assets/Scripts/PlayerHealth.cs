@@ -1,6 +1,7 @@
 using Cinemachine.PostFX;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     int maxHealth = 100, minHealth = 1;
     Animator animator;
     public bool isAlive = true;
+
+    [SerializeField] Volume volume;
 
     //damage
     /*
@@ -74,6 +77,11 @@ public class PlayerHealth : MonoBehaviour
     {
         if (healthSlider.value != damageSlider.value)
             damageSlider.value -= speed;
+
+        if(healthSlider.value < 20)
+            volume.enabled = true;
+
+        else volume.enabled = false;
     }
 
     public void TakeDamage(int damage)
