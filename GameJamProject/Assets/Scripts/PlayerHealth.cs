@@ -47,13 +47,13 @@ public class PlayerHealth : MonoBehaviour
         if (healthSlider.value < 20)
         {
             volume.enabled = true;
-            heartBeatSFX.gameObject.SetActive(true);
+            if(!AudioManager.instance.audioSource.isPlaying)
+            AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.heartBeatfx);
         }
 
         else
         {
             volume.enabled = false;
-            heartBeatSFX.gameObject.SetActive(false);
         }
     }
 
@@ -69,6 +69,7 @@ public class PlayerHealth : MonoBehaviour
             isAlive = false;
             volume.enabled = false;
             animator.SetTrigger("Death");
+            AudioManager.instance.audioSource.Stop();
         }
     }
 

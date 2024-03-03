@@ -8728,13 +8728,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1487033112}
   - component: {fileID: 1487033111}
+  - component: {fileID: 1487033113}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1487033111
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8745,8 +8746,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a944da0b561ce3c45899c952aac2c4e8, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -8846,6 +8847,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1487033113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487033110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c071618f7277f842abb7cfbbed80b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1487033111}
+  heartBeatfx: {fileID: 8300000, guid: a944da0b561ce3c45899c952aac2c4e8, type: 3}
+  attack: {fileID: 8300000, guid: bf1c4ca4407a11943850550e9ebc820f, type: 3}
+  hit: {fileID: 8300000, guid: fd966509a0a84e34ba596216eaec00ed, type: 3}
 --- !u!1 &1489621622
 GameObject:
   m_ObjectHideFlags: 0
