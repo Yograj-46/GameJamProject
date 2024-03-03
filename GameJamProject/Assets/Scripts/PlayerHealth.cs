@@ -54,7 +54,6 @@ public class PlayerHealth : MonoBehaviour
         {
             volume.enabled = false;
             heartBeatSFX.gameObject.SetActive(false);
-
         }
     }
 
@@ -68,6 +67,7 @@ public class PlayerHealth : MonoBehaviour
         // death screen and reload scene
         if(healthSlider.value == 0){
             isAlive = false;
+            volume.enabled = false;
             animator.SetTrigger("Death");
         }
     }
