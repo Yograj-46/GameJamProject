@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     public bool isAlive = true;
 
     [SerializeField] Volume volume;
+    [SerializeField] AudioSource heartBeatSFX;
 
     
     private void Start()
@@ -43,10 +44,18 @@ public class PlayerHealth : MonoBehaviour
         if (healthSlider.value != damageSlider.value)
             damageSlider.value -= speed;
 
-        if(healthSlider.value < 20)
+        if (healthSlider.value < 20)
+        {
             volume.enabled = true;
+            heartBeatSFX.gameObject.SetActive(true);
+        }
 
-        else volume.enabled = false;
+        else
+        {
+            volume.enabled = false;
+            heartBeatSFX.gameObject.SetActive(false);
+
+        }
     }
 
     public void TakeDamage(int damage)
