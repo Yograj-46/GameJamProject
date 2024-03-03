@@ -17,41 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] Volume volume;
 
-    //damage
-    /*
-    public CinemachineVolumeSettings volumeSettings;
-    public Vignette vig;
-    public float inten=0;
-
-
-
-    public IEnumerator lowHealth()
-    {
-        if (healthSlider.value <= 12)
-        {
-            vig.enabled.Override(true);
-            if (vig.intensity < 0.375)
-            {
-                inten = 0;
-                while (vig.intensity > 0.51)
-                {
-                    inten += 0.1f;
-                    vig.intensity.Override(inten);
-                    yield return new WaitForSeconds(0.1f);
-                }
-                vig.intensity.Override(0.374f);
-                yield return new WaitForSeconds(0.1f);
-            }
-            yield return new WaitForSeconds(0.1f);
-
-        }
-        else
-        {
-            vig.enabled.Override(false);
-            yield return null;
-        }
-    }
-    */
+    
     private void Start()
     {
         healthSlider.value = maxHealth;
@@ -69,7 +35,6 @@ public class PlayerHealth : MonoBehaviour
         if (healthSlider.value < minHealth)
             PlayerOut();
 
-        //StartCoroutine(lowHealth());
 
     }
 
