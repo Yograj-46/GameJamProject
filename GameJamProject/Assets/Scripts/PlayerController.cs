@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //sfx
+    public AudioManager sfx;
     //Third Person Controller References
     [SerializeField]
     private Animator playerAnim;
@@ -143,9 +145,11 @@ public class PlayerController : MonoBehaviour
 
             //Call Attack Triggers
             playerAnim.SetTrigger("LightAttack" + currentAttack);
+            sfx.lightAttackSFX();
 
             //Reset Timer
             timeSinceAttack = 0;
+
         }
 
 

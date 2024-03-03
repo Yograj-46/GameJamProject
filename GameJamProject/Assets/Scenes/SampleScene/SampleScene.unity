@@ -111036,6 +111036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8442508359774645683, guid: 0f7b328665fa7cd468198dfedefda492,
         type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 1487033113}
+    - target: {fileID: 8442508359774645683, guid: 0f7b328665fa7cd468198dfedefda492,
+        type: 3}
       propertyPath: sword
       value: 
       objectReference: {fileID: 1283384714}
