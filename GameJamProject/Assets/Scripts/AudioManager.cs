@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip heartBeatfx,attack,hit,swordDraw,swordKeep,whip;
+    public AudioClip heartBeatfx,attack,hit,swordDraw,swordKeep,whip,swim;
     public static AudioManager instance;
 
 
@@ -23,6 +23,11 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.clip = audio;
         audioSource.Play();
+    }
+
+    public void stop()
+    {
+        audioSource.Pause();
     }
 
 

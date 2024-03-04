@@ -6,6 +6,7 @@ public class PlayerFloating : MonoBehaviour
     private bool isInWater = false;
     private Rigidbody rb;
     Animator animator;
+    public AudioManager sfx;
 
     private void Start()
     {
@@ -38,6 +39,14 @@ public class PlayerFloating : MonoBehaviour
            animator.SetBool("IsTreadingWater", true);
             Vector3 newPosition = rb.position + Vector3.up * buoyancyForce * Time.deltaTime;
             rb.MovePosition(newPosition);
+            if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+                sfx.clip(sfx.swim);
+            }
+            else
+            {
+                sfx.stop();
+            }
         }
     }
 }
