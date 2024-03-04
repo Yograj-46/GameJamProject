@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //sfx
+    public AudioManager sfx;
     //Third Person Controller References
     private ThirdPersonController thirdPersonController;
     [SerializeField]
@@ -91,12 +93,14 @@ public class PlayerController : MonoBehaviour
             sword.SetActive(true);
             swordOnShoulder.SetActive(false);
             isEquipped = !isEquipped;
+            sfx.clip(sfx.swordDraw);
         }
         else
         {
             sword.SetActive(false);
             swordOnShoulder.SetActive(true);
             isEquipped = !isEquipped;
+            sfx.clip(sfx.swordKeep);
         }
     }
 
@@ -124,6 +128,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl) && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
         {
             playerAnim.SetBool("Kick", true);
+            sfx.clip(sfx.whip);
             isKicking = true;
         }
         else
@@ -154,9 +159,11 @@ public class PlayerController : MonoBehaviour
 
             //Call Attack Triggers
             playerAnim.SetTrigger("LightAttack" + currentAttack);
+            sfx.clip(sfx.attack);
 
             //Reset Timer
             timeSinceAttack = 0;
+
         }
 
 
