@@ -216,6 +216,7 @@ public class PlayerController : MonoBehaviour
 
             //Call Attack Triggers
             playerAnim.SetTrigger("HeavyAttack" + currentAttack);
+            sfx.clip(sfx.attack);
 
             //Reset Timer
             timeSinceAttack = 0;
