@@ -9,10 +9,11 @@ public class Orb : MonoBehaviour
     public float range;
     public float distance;
     public GameObject summoningButton;
+    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class Orb : MonoBehaviour
         if(other.gameObject.name == "Player"){
             Destroy(gameObject);
         }
+        gameManager.UpdateCount(1);
     }
 
     IEnumerator DestroyItself(){

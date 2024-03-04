@@ -1,8 +1,11 @@
+using System.Collections;
+using StarterAssets;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     //Third Person Controller References
+    private ThirdPersonController thirdPersonController;
     [SerializeField]
     private Animator playerAnim;
 
@@ -35,8 +38,14 @@ public class PlayerController : MonoBehaviour
 
     // Player Health
     PlayerHealth playerHealth;
+
+    [Header ("PowerUps")]
+    public PowerUpType currentPowerUp = PowerUpType.None;
+    public Coroutine powerUpCountDown;
+    public bool hasPowerUp;
     private void Start()
     {
+        thirdPersonController = GetComponent<ThirdPersonController>();
         playerHealth = GetComponent<PlayerHealth>();
     }
     private void Update()
@@ -49,6 +58,8 @@ public class PlayerController : MonoBehaviour
         Equip();
         Block();
         Kick();
+
+        UsePowerUps(); //Activated when player has powerup
     }
     public void CheckEnemy()
     {
@@ -202,11 +213,6 @@ public class PlayerController : MonoBehaviour
             //Reset Timer
             timeSinceAttack = 0;
         }
-
-
-
-
-
     }
     //This will be used at animation event
     public void ResetAttack()
@@ -241,5 +247,62 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("HeavyAttack");
             }
         }
+    }
+
+    //This method checks whether player has powerup or not.
+    private void OnTriggerEnter(Collider other){
+        if(other.gameObject.CompareTag("PowerUp")){
+            hasPowerUp = true;
+            currentPowerUp = other.gameObject.GetComponent<PowerUp>().powerUpType;
+            Destroy(other.gameObject);
+        }
+
+        if(powerUpCountDown != null){
+            StopCoroutine(powerUpCountDown);
+        }
+
+        powerUpCountDown = StartCoroutine(PowerUpCountDownRoutine());
+    }
+
+    //PowerUp Abilities
+    private void UsePowerUps(){
+        if(currentPowerUp == PowerUpType.MovementSpeed){
+            MovementSpeedIncrease();
+        }
+
+        if(currentPowerUp == PowerUpType.ExtraArmor){
+            IncreaseArmor();
+        }
+
+        if(currentPowerUp == PowerUpType.Attack){
+            EfficientAttack();
+        }
+
+        if(currentPowerUp == PowerUpType.InstantHealing){
+            HealingOverTime();
+        }
+    }
+    private void MovementSpeedIncrease(){
+        thirdPersonController.MoveSpeed = 5f;
+        thirdPersonController.SprintSpeed = 10f;
+    }
+
+    private void IncreaseArmor(){
+        playerHealth.TakeDamage(5);
+    }
+
+    private void EfficientAttack(){
+        AttackEnemy(25);
+    }
+
+    private void HealingOverTime(){
+        float healingSpeed = 15f;
+        playerHealth.healthSlider.value += healingSpeed; 
+    }
+
+    IEnumerator PowerUpCountDownRoutine(){
+        yield return new WaitForSeconds(10f);
+        hasPowerUp = false;
+        currentPowerUp = PowerUpType.None;
     }
 }
