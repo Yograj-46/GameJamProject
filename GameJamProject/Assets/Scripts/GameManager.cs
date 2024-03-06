@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
     public TextMeshProUGUI orbsText;
-    private int count;
+    private int count = 0;
 
     void Start(){
 
