@@ -5,9 +5,10 @@ using UnityEngine;
 public class WalkState : StateMachineBehaviour
 {
     float timer;
-    List<Transform> wayPoints = new List<Transform>();
+    public List<Transform> wayPoints = new List<Transform>();
     Rigidbody rb;
     public float walkingSpeed;
+    public Vector3 randomPosition;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -19,23 +20,22 @@ public class WalkState : StateMachineBehaviour
             wayPoints.Add(point);
         }
 
-        Vector3 wayPointPosition = wayPoints[Random.Range(0, wayPoints.Count)].position;
-        rb.MovePosition(Vector3.MoveTowards(rb.transform.position, wayPointPosition, walkingSpeed * Time.deltaTime));
+        randomPosition  = wayPoints[Random.Range(0, wayPoints.Count)].position;
     }
 
     //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameObject wayPoint = GameObject.FindGameObjectWithTag("WayPoint");
-        Vector3 wayPointPosition = wayPoints[Random.Range(0, wayPoints.Count)].position;
+        
+        rb.MovePosition(Vector3.MoveTowards(rb.transform.position, randomPosition, walkingSpeed * Time.deltaTime));
 
-        Vector3 targetDirection = wayPoint.gameObject.transform.position - rb.transform.position;
+        Vector3 targetDirection = randomPosition - rb.transform.position;
             targetDirection.y = 0f;
             Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
             rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRotation, 5f * Time.deltaTime));
 
-        if(Vector3.Distance(wayPoint.transform.position, rb.transform.position) <= 0f){
-            rb.MovePosition(Vector3.MoveTowards(rb.transform.position, wayPointPosition, walkingSpeed * Time.deltaTime));
+        if(Vector3.Distance(randomPosition, rb.transform.position) <= 0f){
+            rb.MovePosition(Vector3.MoveTowards(rb.transform.position, randomPosition, walkingSpeed * Time.deltaTime));
         }
         timer += Time.deltaTime;
         if(timer > 10f){
