@@ -12,6 +12,7 @@ TagManager:
   - Orb
   - PowerUp
   - WayPoint
+  - Ground
   layers:
   - Default
   - TransparentFX

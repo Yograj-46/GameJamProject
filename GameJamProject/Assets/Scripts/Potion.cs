@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class Potion : MonoBehaviour
 {
-    public GameObject potion;
+    public GameObject potionHand;
     public Animator animator;
-    private void OnTriggerStay(Collider other)
+    public Rigidbody rb;
+    public CapsuleCollider cc;
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.P))
+        rb.useGravity = false;
+        cc.radius = 0.03f;
+        cc.isTrigger = true;
+        if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.P))
         {
             animator.SetTrigger("Picking");
-            potion.SetActive(true);
+            potionHand.SetActive(true);
             Destroy(gameObject);
         }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+       
     }
     // Start is called before the first frame update
     void Start()
