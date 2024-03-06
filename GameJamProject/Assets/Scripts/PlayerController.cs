@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
         CheckEnemy();
         LightAttack();
         HeavyAttack();
-        PickUpObjects();
         Equip();
         Block();
         Kick();
@@ -71,11 +70,6 @@ public class PlayerController : MonoBehaviour
             enemyHealth =col.GetComponent<EnemyHealth>();
         }
 
-    }
-    void PickUpObjects()
-    {
-        if (Input.GetKey(KeyCode.P) && playerHealth.isAlive)
-            playerAnim.SetTrigger("Picking");
     }
     private void Equip()
     {
