@@ -653,6 +653,7 @@ GameObject:
   - component: {fileID: 4725986386238136262}
   - component: {fileID: 4722491359427304998}
   - component: {fileID: 3206488929914594967}
+  - component: {fileID: 206810097}
   m_Layer: 0
   m_Name: Water_Resource
   m_TagString: Water
@@ -667,7 +668,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4766737756278628326}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 458.5516, y: 9.5, z: 287.4043}
   m_LocalScale: {x: 1000, y: 1, z: 1000}
   m_ConstrainProportionsScale: 0
@@ -725,6 +726,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &206810097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766737756278628326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 320.32153, z: 9.999997}
+  m_Center: {x: 0, y: -160.55411, z: 0}
 --- !u!1 &5558459236600856394
 GameObject:
   m_ObjectHideFlags: 0

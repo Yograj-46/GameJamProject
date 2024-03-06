@@ -11,6 +11,7 @@ TagManager:
   - HealingCircle
   - Orb
   - PowerUp
+  - WayPoint
   layers:
   - Default
   - TransparentFX
