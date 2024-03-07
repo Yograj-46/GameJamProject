@@ -60,6 +60,8 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         healthSlider.value -= damage;
+        if(healthSlider.value > minHealth)
+        animator.SetTrigger("Hit");
     }
 
     void PlayerOut()
