@@ -1,46 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WalkState : StateMachineBehaviour
 {
     float timer;
     float randomTime;
-    public List<Transform> wayPoints = new List<Transform>();
     Rigidbody rb;
     public float walkingSpeed;
     public Vector3 randomPosition;
+    int randomPoint;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer = 0;
         randomTime = Random.Range(7.5f, 20f);
         rb = animator.GetComponent<Rigidbody>();
-        GameObject wayPoint = GameObject.FindGameObjectWithTag("WayPoint");
-        foreach (Transform point in wayPoint.transform)
-        {
-            wayPoints.Add(point);
-        }
 
-        randomPosition  = wayPoints[Random.Range(0, wayPoints.Count)].position;
+
+        randomPoint = Random.Range(0, 4);
     }
 
     //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        switch (randomPoint)
+        {
+            case 0:
+                randomPosition = new Vector3(animator.transform.position.x + 10, 0, animator.transform.position.z);
+                break;
+            case 1:
+                randomPosition = new Vector3(animator.transform.position.x - 10, 0, animator.transform.position.z);
+                break;
+            case 2:
+                randomPosition = new Vector3(animator.transform.position.x, 0, animator.transform.position.z + 10);
+                break;
+            case 3:
+                randomPosition = new Vector3(animator.transform.position.x, 0, animator.transform.position.z - 10);
+                break;
+        }
+
         rb.MovePosition(Vector3.MoveTowards(rb.transform.position, randomPosition, walkingSpeed * Time.deltaTime));
 
         Vector3 targetDirection = randomPosition - rb.transform.position;
-            targetDirection.y = 0f;
-            Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-            rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRotation, 5f * Time.deltaTime));
+        targetDirection.y = 0f;
+        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+        rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRotation, 5f * Time.deltaTime));
 
-        if(Vector3.Distance(randomPosition, rb.transform.position) <= 0f){
-            rb.MovePosition(Vector3.MoveTowards(rb.transform.position, randomPosition, walkingSpeed * Time.deltaTime));
-        }
         timer += Time.deltaTime;
-        if(timer > randomTime){
+        if (timer > randomTime)
+        {
             animator.SetBool("isRoaming", false);
         }
     }
@@ -51,15 +58,5 @@ public class WalkState : StateMachineBehaviour
         rb.MovePosition(rb.transform.position);
     }
 
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
 
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }
