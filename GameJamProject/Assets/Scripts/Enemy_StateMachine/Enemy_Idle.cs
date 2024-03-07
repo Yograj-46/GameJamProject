@@ -5,6 +5,7 @@ public class Enemy_Idle : StateMachineBehaviour
 {
     public Transform player;
     public float timer;
+    private float randomTime;
     Rigidbody rb;
     EnemyHealth enemyHealth;
     Enemy enemy;
@@ -13,6 +14,7 @@ public class Enemy_Idle : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer = 0;
+        randomTime = Random.Range(1.5f, 5f);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody>();
         enemyHealth = animator.GetComponent<EnemyHealth>();
@@ -24,9 +26,10 @@ public class Enemy_Idle : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer += Time.deltaTime;
-        if(timer > 5f){
+        if(timer > randomTime){
             animator.SetBool("isRoaming", true);
         }
+        
         if (enemyHealth.isAlive && playerHealth.isAlive)
         {
             if (Vector3.Distance(player.position, rb.transform.position) <= enemy.chaseRange )

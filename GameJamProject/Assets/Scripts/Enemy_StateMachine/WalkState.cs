@@ -5,6 +5,7 @@ using UnityEngine;
 public class WalkState : StateMachineBehaviour
 {
     float timer;
+    float randomTime;
     public List<Transform> wayPoints = new List<Transform>();
     Rigidbody rb;
     public float walkingSpeed;
@@ -13,6 +14,7 @@ public class WalkState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer = 0;
+        randomTime = Random.Range(7.5f, 20f);
         rb = animator.GetComponent<Rigidbody>();
         GameObject wayPoint = GameObject.FindGameObjectWithTag("WayPoint");
         foreach (Transform point in wayPoint.transform)
@@ -38,7 +40,7 @@ public class WalkState : StateMachineBehaviour
             rb.MovePosition(Vector3.MoveTowards(rb.transform.position, randomPosition, walkingSpeed * Time.deltaTime));
         }
         timer += Time.deltaTime;
-        if(timer > 10f){
+        if(timer > randomTime){
             animator.SetBool("isRoaming", false);
         }
     }
