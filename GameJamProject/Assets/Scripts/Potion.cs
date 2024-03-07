@@ -11,20 +11,11 @@ public class Potion : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         rb.useGravity = false;
-        cc.radius = 0.03f;
+        cc.radius = 0.02f;
         cc.isTrigger = true;
-        if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.P))
-        {
-            animator.SetTrigger("Picking");
-            potionHand.SetActive(true);
-            Destroy(gameObject);
-        }
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-       
-    }
+
     // Start is called before the first frame update
     void Start()
     {
