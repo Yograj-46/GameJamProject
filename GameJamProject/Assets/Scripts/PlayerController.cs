@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject potionHand;
+    //public GameObject potionHand;
     //sfx
     public AudioManager sfx;
     //Third Person Controller References
@@ -255,7 +255,8 @@ public class PlayerController : MonoBehaviour
 
     //This method checks whether player has powerup or not.
     private void OnTriggerEnter(Collider other){
-        if(other.gameObject.CompareTag("PowerUp")){
+        //Debug.Log(gameObject.transform.position);
+        if (other.gameObject.CompareTag("PowerUp")){
             hasPowerUp = true;
             currentPowerUp = other.gameObject.GetComponent<PowerUp>().powerUpType;
             Destroy(other.gameObject);
@@ -317,25 +318,6 @@ public class PlayerController : MonoBehaviour
         currentPowerUp = PowerUpType.None;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("ss");
-        if (other.gameObject.CompareTag("Potion") && Input.GetKeyDown(KeyCode.P))
-        {
-            playerAnim.SetTrigger("Picking");
-            Invoke("potionHandActive", 1.47f);
-            Invoke("potionHandInactive",8.52f);
-            Destroy(other.gameObject,1.5f);
-        }
-    }
 
-    void potionHandActive()
-    {
-        potionHand.SetActive(true);
-    }
 
-    void potionHandInactive()
-    {
-        potionHand.SetActive(false);
-    }
 }

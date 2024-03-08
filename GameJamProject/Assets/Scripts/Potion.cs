@@ -8,6 +8,7 @@ public class Potion : MonoBehaviour
     public Animator animator;
     public Rigidbody rb;
     public CapsuleCollider cc;
+    public GameObject player;
     private void OnCollisionEnter(Collision collision)
     {
         rb.useGravity = false;
@@ -25,6 +26,25 @@ public class Potion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        bool posCheckx= (gameObject.transform.position.x)-1< player.transform.position.x && player.transform.position.x < (gameObject.transform.position.x)+1;
+       bool posCheckz= (gameObject.transform.position.z)-1< player.transform.position.z &&  player.transform.position.z < (gameObject.transform.position.z) +1;
+        if (posCheckx && posCheckz && Input.GetKey(KeyCode.P))
+        {
+
+            animator.SetTrigger("Picking");
+            Invoke("potionHandActive", 1.47f);
+            Invoke("potionHandInactive", 8.52f);
+            Destroy(gameObject, 1.5f);
+
+        }
+    }
+    void potionHandActive()
+    {
+        potionHand.SetActive(true);
+    }
+
+    void potionHandInactive()
+    {
+        potionHand.SetActive(false);
     }
 }
