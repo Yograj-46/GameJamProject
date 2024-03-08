@@ -401,7 +401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb94b88dc4bf9774b8a686a9aa698ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints: []
   walkingSpeed: 1.5
   randomPosition: {x: 0, y: 0, z: 0}
 --- !u!91 &9100000

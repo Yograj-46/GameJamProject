@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
         Kick();
 
         UsePowerUps(); //Activated when player has powerup
+        //CollectOrb();
     }
     public void CheckEnemy()
     {
@@ -265,6 +266,13 @@ public class PlayerController : MonoBehaviour
         }
 
         powerUpCountDown = StartCoroutine(PowerUpCountDownRoutine());
+    }
+
+    //Collecting Orb Animation
+    private void CollectOrb(){
+        if(Input.GetKey(KeyCode.V)){
+            playerAnim.SetTrigger("Summoning");
+        }
     }
 
     //PowerUp Abilities
