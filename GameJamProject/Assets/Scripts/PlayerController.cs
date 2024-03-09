@@ -1,10 +1,14 @@
 using System.Collections;
 using StarterAssets;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
     //public GameObject potionHand;
+    //levlling
+    public VisualEffect levelUp;
     //sfx
     public AudioManager sfx;
     //Third Person Controller References
@@ -53,6 +57,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        Power();
         timeSinceAttack += Time.deltaTime;
         CheckEnemy();
         LightAttack();
@@ -100,6 +105,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Power()
+    {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            playerAnim.SetTrigger("PowerUp");
+            levelUp.Play();
+
+        }
+    }    
     public void Equipped()
     {
         isEquipping = false;
