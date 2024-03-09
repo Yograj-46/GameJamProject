@@ -25,7 +25,7 @@ TagManager:
   - Enemy
   - Player
   - waypoint
-  - 
+  - Place
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Place
+    uniqueID: 3148251499
     locked: 0
