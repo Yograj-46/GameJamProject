@@ -25,14 +25,12 @@ public class Orb : MonoBehaviour
         Vector3 target = (player.position - transform.position).normalized;
         
         if(distance <= range){
-            Debug.Log("Within the range");
             //summoningButton.gameObject.SetActive(true); //Enable button when player is close to the orb
             if(Input.GetKey(KeyCode.M)){
                 transform.Translate(target * 5 * Time.deltaTime);
             }
         }
         else{
-            Debug.Log("Outside range");
             //summoningButton.gameObject.SetActive(false); //Disable button when player goes far from orb
         }
 
