@@ -12,7 +12,6 @@ public class Enemy_Attack : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody>();
         playerHealth = player.GetComponent<PlayerHealth>();
-
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

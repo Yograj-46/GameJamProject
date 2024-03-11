@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] LayerMask playerMask;
 
     //Chase Range
+    public float currentDistance;
     public float chaseRange = 5;
 
     //Particle after death
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentDistance = Vector3.Distance(player.position, transform.position);
         StartCoroutine("AfterEffects");
     }
     
