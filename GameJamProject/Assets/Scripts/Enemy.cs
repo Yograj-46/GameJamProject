@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public float chasingSpeed;
     public bool isChasing;
     public bool isAttacking;
+    public bool isGrounded;
     public float remainingDist;
     private EnemyHealth health;
 
@@ -64,6 +65,12 @@ public class Enemy : MonoBehaviour
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    private void OnCollisionEnter(Collision collision){
+        if(collision.gameObject.name == "Ground"){
+            isGrounded = true;
+        }
     }
 
     IEnumerator AfterEffects(){
