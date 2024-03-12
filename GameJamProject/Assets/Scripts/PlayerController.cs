@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            Invoke("Power", 11f);
+            Power();
         }
         timeSinceAttack += Time.deltaTime;
         CheckEnemy();
