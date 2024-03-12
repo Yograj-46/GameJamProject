@@ -6,17 +6,19 @@ public class Dragon_Landed : StateMachineBehaviour
 {
     Transform player;
     Rigidbody rb;
+    Enemy enemy;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.Find("Player").transform;
         rb = animator.GetComponent<Rigidbody>();
+        enemy = animator.GetComponent<Enemy>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(Vector3.Distance(player.position, rb.transform.position) <= 25f){
+        if(Vector3.Distance(player.position, rb.transform.position) <= 25f && enemy.isGrounded){
             animator.SetTrigger("Chase");   
         }
     }

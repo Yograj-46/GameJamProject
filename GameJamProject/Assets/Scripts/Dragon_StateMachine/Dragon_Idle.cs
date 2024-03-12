@@ -5,13 +5,13 @@ using UnityEngine;
 public class Dragon_Idle : StateMachineBehaviour
 {
     Transform player;
-    ParticleSystem fireParticle;
+    ParticleSystem flameParticle;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.Find("Player").transform;
-        fireParticle = animator.GetComponentInChildren<ParticleSystem>();
+        flameParticle = animator.GetComponentInChildren<ParticleSystem>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -20,7 +20,7 @@ public class Dragon_Idle : StateMachineBehaviour
         Rigidbody rb = animator.GetComponent<Rigidbody>();
         if(Vector3.Distance(player.position, rb.transform.position) <= 80f){
             animator.SetTrigger("Scream");
-            fireParticle.Play();
+            flameParticle.Play();
         }
     }
 
@@ -28,7 +28,7 @@ public class Dragon_Idle : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Scream");
-        fireParticle.Stop();
+        flameParticle.Stop();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
