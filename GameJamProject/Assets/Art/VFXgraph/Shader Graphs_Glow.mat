@@ -67,5 +67,5 @@ Material:
     - _ZWriteControl: 0
     - _frenelPower: 2.5
     m_Colors:
-    - _Color: {r: 0.011887974, g: 0.00891598, b: 0, a: 0}
+    - _Color: {r: 0.023406863, g: 0.015686275, b: 0, a: 0}
   m_BuildTextureStacks: []

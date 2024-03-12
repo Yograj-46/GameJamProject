@@ -57,7 +57,10 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        Power();
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Invoke("Power", 11f);
+        }
         timeSinceAttack += Time.deltaTime;
         CheckEnemy();
         LightAttack();
@@ -107,12 +110,9 @@ public class PlayerController : MonoBehaviour
 
     void Power()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
+        
             playerAnim.SetTrigger("PowerUp");
             levelUp.Play();
-
-        }
     }    
     public void Equipped()
     {
