@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
+using random = UnityEngine.Random;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public ParticleSystem bloodSplash;
     public Slider healthSlider;
     public Slider damageSlider;
     public GameObject healthCircle;
@@ -21,12 +23,17 @@ public class PlayerHealth : MonoBehaviour
     
     private void Start()
     {
+        bloodSplash.Stop();
         healthSlider.value = maxHealth;
         healthSlider.maxValue = maxHealth;
         damageSlider.maxValue = maxHealth;
         animator = GetComponent<Animator>();
     }
-    
+
+    void bloodStop()
+    {
+        bloodSplash.Stop();
+    }
 
     private void Update()
     {
@@ -35,8 +42,6 @@ public class PlayerHealth : MonoBehaviour
         bool isLowhealth = healthSlider.value <= 12;
         if (healthSlider.value < minHealth)
             PlayerOut();
-
-
     }
 
     private void UpdateDamage()
@@ -61,7 +66,15 @@ public class PlayerHealth : MonoBehaviour
     {
         healthSlider.value -= damage;
         if(healthSlider.value > minHealth)
-        animator.SetTrigger("Hit");
+        {
+            animator.SetTrigger("Hit");
+            int rand = random.Range(1, 3);
+            if (rand == 1)
+            {
+                bloodSplash.Play();
+                Invoke("bloodStop", 0.25f);
+            }
+        }
     }
 
     void PlayerOut()
