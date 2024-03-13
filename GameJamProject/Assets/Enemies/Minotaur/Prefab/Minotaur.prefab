@@ -4905,12 +4905,12 @@ PrefabInstance:
     - target: {fileID: 3671585849287526727, guid: d9be7fbd698de4a438b61eafab765507,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 795.6
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3671585849287526727, guid: d9be7fbd698de4a438b61eafab765507,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 309.59998
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3671585849287526727, guid: d9be7fbd698de4a438b61eafab765507,
         type: 3}
@@ -4981,6 +4981,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003258608665269032, guid: d9be7fbd698de4a438b61eafab765507,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003258608665269032, guid: d9be7fbd698de4a438b61eafab765507,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117864407812844173, guid: d9be7fbd698de4a438b61eafab765507,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117864407812844173, guid: d9be7fbd698de4a438b61eafab765507,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9be7fbd698de4a438b61eafab765507, type: 3}
