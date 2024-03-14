@@ -27,10 +27,10 @@ namespace StarterAssets
         {
             starterAssetsInputs.SprintInput(virtualSprintState);
         }
-        public void VirtualEquipInput(bool virtualequipState)
-        {
-            starterAssetsInputs.EquiptInput(virtualequipState);
-        }
+        //public void VirtualEquipInput(bool virtualequipState)
+        //{
+        //    starterAssetsInputs.EquiptInput(virtualequipState);
+        //}
     }
 
 }
