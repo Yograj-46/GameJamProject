@@ -12,6 +12,10 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool equip;
+		public bool lightAttack;
+		public bool heavytAttack;
+		public bool pickup;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -20,8 +24,10 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
+		
+
 #if ENABLE_INPUT_SYSTEM
-		public void OnMove(InputValue value)
+        public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
 		}
@@ -43,10 +49,26 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+        //public void OnEquip(InputValue value)
+        //{
+        //    EquiptInput(value.isPressed);
+        //}
+        //public void OnLightAttack(InputValue value)
+        //{
+        //    LightAttackInput(value.isPressed);
+        //}
+        //public void OnHeavyAttack(InputValue value)
+        //{
+        //    HeavyAttackInput(value.isPressed);
+        //}
+        //public void OnPickup(InputValue value)
+        //{
+        //    PickupInput(value.isPressed);
+        //}
 #endif
 
 
-		public void MoveInput(Vector2 newMoveDirection)
+        public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
 		} 
@@ -65,10 +87,25 @@ namespace StarterAssets
 		{
 			sprint = newSprintState;
 		}
-
-		private void OnApplicationFocus(bool hasFocus)
+        //public void EquiptInput(bool equipState)
+        //{
+        //    equip = equipState;
+        //}
+        //public void LightAttackInput(bool lightAttackState)
+        //{
+        //   lightAttack = lightAttackState;
+        //}
+        //public void HeavyAttackInput(bool heavyAttackState)
+        //{
+        //    heavytAttack = heavyAttackState;
+        //}
+        //public void PickupInput(bool pickupkState)
+        //{
+        //    pickup = pickupkState;
+        //}
+        private void OnApplicationFocus(bool hasFocus)
 		{
-			SetCursorState(cursorLocked);
+			//SetCursorState(cursorLocked);
 		}
 
 		private void SetCursorState(bool newState)
