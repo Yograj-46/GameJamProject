@@ -1,6 +1,5 @@
-using System.Collections;
 using StarterAssets;
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -13,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public AudioManager sfx;
     //Third Person Controller References
     private ThirdPersonController thirdPersonController;
+    private StarterAssetsInputs _input;
+
     [SerializeField]
     private Animator playerAnim;
 
@@ -46,12 +47,13 @@ public class PlayerController : MonoBehaviour
     // Player Health
     PlayerHealth playerHealth;
 
-    [Header ("PowerUps")]
+    [Header("PowerUps")]
     public PowerUpType currentPowerUp = PowerUpType.None;
     public Coroutine powerUpCountDown;
     public bool hasPowerUp;
     private void Start()
     {
+        _input = GetComponent<StarterAssetsInputs>();
         thirdPersonController = GetComponent<ThirdPersonController>();
         playerHealth = GetComponent<PlayerHealth>();
     }
@@ -77,17 +79,19 @@ public class PlayerController : MonoBehaviour
         Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
         foreach (Collider col in colInfo)
         {
-            enemyHealth =col.GetComponent<EnemyHealth>();
+            enemyHealth = col.GetComponent<EnemyHealth>();
         }
 
     }
     private void Equip()
     {
-        if (Input.GetKeyDown(KeyCode.R) && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
+        if (_input.equip && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
         {
             isEquipping = true;
             playerAnim.SetTrigger("Equip");
+            _input.equip = false;
         }
+       
     }
 
     public void ActiveWeapon()
@@ -110,10 +114,10 @@ public class PlayerController : MonoBehaviour
 
     void Power()
     {
-        
-            playerAnim.SetTrigger("PowerUp");
-            levelUp.Play();
-    }    
+
+        playerAnim.SetTrigger("PowerUp");
+        levelUp.Play();
+    }
     public void Equipped()
     {
         isEquipping = false;
@@ -151,7 +155,7 @@ public class PlayerController : MonoBehaviour
     private void LightAttack()
     {
 
-        if (Input.GetMouseButtonDown(0) && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && playerHealth.isAlive)
+        if (_input.lightAttack && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && playerHealth.isAlive)
         {
             if (!isEquipped)
                 return;
@@ -173,7 +177,7 @@ public class PlayerController : MonoBehaviour
 
             //Reset Timer
             timeSinceAttack = 0;
-
+            _input.lightAttack = false;
         }
 
 
@@ -208,7 +212,7 @@ public class PlayerController : MonoBehaviour
     private void HeavyAttack()
     {
 
-        if (Input.GetMouseButtonDown(1) && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && playerHealth.isAlive)
+        if (_input.heavytAttack && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && playerHealth.isAlive)
         {
             if (!isEquipped)
                 return;
@@ -230,6 +234,7 @@ public class PlayerController : MonoBehaviour
 
             //Reset Timer
             timeSinceAttack = 0;
+            _input.heavytAttack = false;
         }
     }
     //This will be used at animation event
@@ -268,15 +273,18 @@ public class PlayerController : MonoBehaviour
     }
 
     //This method checks whether player has powerup or not.
-    private void OnTriggerEnter(Collider other){
+    private void OnTriggerEnter(Collider other)
+    {
         //Debug.Log(gameObject.transform.position);
-        if (other.gameObject.CompareTag("PowerUp")){
+        if (other.gameObject.CompareTag("PowerUp"))
+        {
             hasPowerUp = true;
             currentPowerUp = other.gameObject.GetComponent<PowerUp>().powerUpType;
             Destroy(other.gameObject);
         }
 
-        if(powerUpCountDown != null){
+        if (powerUpCountDown != null)
+        {
             StopCoroutine(powerUpCountDown);
         }
 
@@ -284,49 +292,61 @@ public class PlayerController : MonoBehaviour
     }
 
     //Collecting Orb Animation
-    private void CollectOrb(){
-        if(Input.GetKey(KeyCode.V)){
+    private void CollectOrb()
+    {
+        if (Input.GetKey(KeyCode.V))
+        {
             playerAnim.SetTrigger("Summoning");
         }
     }
 
     //PowerUp Abilities
-    private void UsePowerUps(){
-        if(currentPowerUp == PowerUpType.MovementSpeed){
+    private void UsePowerUps()
+    {
+        if (currentPowerUp == PowerUpType.MovementSpeed)
+        {
             MovementSpeedIncrease();
         }
 
-        if(currentPowerUp == PowerUpType.ExtraArmor){
+        if (currentPowerUp == PowerUpType.ExtraArmor)
+        {
             IncreaseArmor();
         }
 
-        if(currentPowerUp == PowerUpType.Attack){
+        if (currentPowerUp == PowerUpType.Attack)
+        {
             EfficientAttack();
         }
 
-        if(currentPowerUp == PowerUpType.InstantHealing){
+        if (currentPowerUp == PowerUpType.InstantHealing)
+        {
             HealingOverTime();
         }
     }
-    private void MovementSpeedIncrease(){
+    private void MovementSpeedIncrease()
+    {
         thirdPersonController.MoveSpeed = 5f;
         thirdPersonController.SprintSpeed = 10f;
     }
 
-    private void IncreaseArmor(){
+    private void IncreaseArmor()
+    {
         playerHealth.TakeDamage(5);
     }
 
-    private void EfficientAttack(){
+    private void EfficientAttack()
+    {
         AttackEnemy(25);
     }
 
-    private void HealingOverTime(){
+    private void HealingOverTime()
+    {
         float healingSpeed = 15f;
-        playerHealth.healthSlider.value += healingSpeed; 
+        playerHealth.healthSlider.value += healingSpeed;
     }
 
-    IEnumerator PowerUpCountDownRoutine(){
+    IEnumerator PowerUpCountDownRoutine()
+    {
         yield return new WaitForSeconds(10f);
         hasPowerUp = false;
         currentPowerUp = PowerUpType.None;
