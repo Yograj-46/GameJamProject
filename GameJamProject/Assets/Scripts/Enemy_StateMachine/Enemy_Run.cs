@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy_Run : StateMachineBehaviour
@@ -35,6 +36,7 @@ public class Enemy_Run : StateMachineBehaviour
             if (Vector3.Distance(targetPosition, rb.transform.position) <= attackRange)
             {
                 animator.SetTrigger("Attack1");
+                //AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.minotaurAttack);
             }
         }
     }

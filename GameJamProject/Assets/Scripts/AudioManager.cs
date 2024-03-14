@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip heartBeatfx,attack,hit,swordDraw,swordKeep,whip,swim;
+    public AudioClip heartBeatfx,attack,swordHit,swordDraw,swordKeep,whip,swim,getHit,minotaurAttack,centaurRun, centaurNeigh;
     public static AudioManager instance;
 
 
@@ -16,7 +16,6 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         if (instance == null)
             instance = this;
-
     }
 
     public void clip(AudioClip audio)

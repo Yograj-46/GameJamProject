@@ -17,7 +17,6 @@ public class Enemy_Attack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
         rb.constraints = RigidbodyConstraints.FreezeRotation;
 
         if (Vector3.Distance(player.position, rb.transform.position) >= 2 && playerHealth.isAlive)

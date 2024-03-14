@@ -4006,7 +4006,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   currentDistance: 0
-  chaseRange: 7.5
+  chaseRange: 20
   deadParticle: {fileID: 773917706881728651}
 --- !u!82 &580196122
 AudioSource:

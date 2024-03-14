@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] orbs;
     public GameObject potions;  
     public Vector3[] spawnPositions;
+    public GameObject eagles;
     public int orbsPerSpawn;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("InstantiateOrbs", 10f, 10f);
-        for(int i = 0;i<6;i++)
+        InvokeRepeating("InstantiateEagles", 0f, 25f);
+        for(int i = 0; i < 6; i++)
         {
             InstantiatePotions();
         }
@@ -29,15 +29,9 @@ public class SpawnManager : MonoBehaviour
         Instantiate(potions, spawnPositions[ind], potions.transform.rotation);
     }
 
-    void InstantiateOrbs()
-    {
-        foreach (Vector3 position in spawnPositions)
-        {
-            for (int i = 0; i < orbsPerSpawn; i++)
-            {
-                int index = Random.Range(0, orbs.Length);
-                Instantiate(orbs[index], position, orbs[index].transform.rotation);
-            }
-        }
+    void InstantiateEagles(){
+        Vector3 spawnPos = new Vector3(Random.Range(150f, 850f), Random.Range(50f, 150f), 75f);
+
+        Instantiate(eagles, spawnPos, eagles.transform.rotation);
     }
 }

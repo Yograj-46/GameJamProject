@@ -33,8 +33,6 @@ public class Orb : MonoBehaviour
         else{
             //summoningButton.gameObject.SetActive(false); //Disable button when player goes far from orb
         }
-
-        StartCoroutine("DestroyItself");
     }
 
     private void OnTriggerEnter(Collider other){
@@ -42,10 +40,5 @@ public class Orb : MonoBehaviour
             Destroy(gameObject);
         }
         gameManager.UpdateCount(1);
-    }
-
-    IEnumerator DestroyItself(){
-        yield return new WaitForSeconds(10f);
-        Destroy(gameObject);
     }
 }

@@ -18,7 +18,6 @@ public class PlayerHealth : MonoBehaviour
     public bool isAlive = true;
 
     [SerializeField] Volume volume;
-    [SerializeField] AudioSource heartBeatSFX;
 
     
     private void Start()
@@ -68,6 +67,7 @@ public class PlayerHealth : MonoBehaviour
         if(healthSlider.value > minHealth)
         {
             animator.SetTrigger("Hit");
+            AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.getHit);
             int rand = random.Range(1, 3);
             if (rand == 1)
             {
