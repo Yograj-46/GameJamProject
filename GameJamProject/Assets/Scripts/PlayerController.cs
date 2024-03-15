@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     public bool hasPowerUp;
     private void Start()
     {
+        levelUp.enabled = false;
         _input = GetComponent<StarterAssetsInputs>();
         thirdPersonController = GetComponent<ThirdPersonController>();
         playerHealth = GetComponent<PlayerHealth>();
@@ -114,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
     void Power()
     {
-
+        levelUp.enabled = true;
         playerAnim.SetTrigger("PowerUp");
         levelUp.Play();
     }
