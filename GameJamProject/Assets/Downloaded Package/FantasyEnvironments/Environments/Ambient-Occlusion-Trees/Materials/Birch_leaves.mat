@@ -8,17 +8,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Birch_leaves
-  m_Shader: {fileID: 4800000, guid: 99134b1f0c27d54469a840832a28fadf, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0f4122b9a743b744abe2fb6a0a88868b, type: 3}
   m_ValidKeywords:
-  - EFFECT_BUMP
-  - _WINDQUALITY_BETTER
+  - GEOM_TYPE_LEAF
   m_InvalidKeywords:
   - BACKFACE_NORMAL_MODE_MIRROR
+  - _WINDQUALITY_BETTER
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: TreeTransparentCutout
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -138,7 +139,7 @@ Material:
     - _Blend: 0
     - _BumpScale: 1
     - _CastShadows: 1
-    - _Cull: 2
+    - _Cull: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -166,7 +167,7 @@ Material:
     - _TwoSided: 0
     - _UVSec: 0
     - _WINDQUALITY: 4
-    - _WindQuality: 3
+    - _WindQuality: 2
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Dragon_Sleep : StateMachineBehaviour
 {
     Transform player;
+    public float wakeUpDist = 100f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -16,7 +17,7 @@ public class Dragon_Sleep : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Rigidbody rb = animator.GetComponent<Rigidbody>();
-        if(Vector3.Distance(player.position, rb.transform.position) < 100f){
+        if(Vector3.Distance(player.position, rb.transform.position) <= wakeUpDist){
             animator.SetTrigger("Idle");
         }
     }
