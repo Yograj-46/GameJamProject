@@ -139,15 +139,15 @@ public class PlayerController : MonoBehaviour
 
     public void Kick()
     {
-        if (Input.GetKey(KeyCode.LeftControl) && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
+        if (_input.kick && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
         {
-            playerAnim.SetBool("Kick", true);
+            playerAnim.SetTrigger("Kicking");
             sfx.clip(sfx.whip);
             isKicking = true;
+            _input.kick = false;
         }
         else
         {
-            playerAnim.SetBool("Kick", false);
             isKicking = false;
         }
     }

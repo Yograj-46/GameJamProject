@@ -38,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
             rb.isKinematic = true;
             animator.SetTrigger("Death");
             animator.GetComponent<CapsuleCollider>().enabled = false;
+            
         }
     }
 
@@ -50,5 +51,10 @@ public class EnemyHealth : MonoBehaviour
     //To set current health  of the enemy in slider
     public void SetHealth(int health){
         healthSlider.value = health;
+    }
+    public void DisableObject()
+    {
+        currentHealth = maxHealth;
+        gameObject.SetActive(false);
     }
 }
