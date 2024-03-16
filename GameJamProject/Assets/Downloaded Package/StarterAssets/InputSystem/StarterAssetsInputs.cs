@@ -17,6 +17,7 @@ namespace StarterAssets
 		public bool heavytAttack;
 		public bool pickup;
 		public bool kick;
+		public bool summon;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -70,6 +71,9 @@ namespace StarterAssets
         {
             KickpInput(value.isPressed);
         }
+		public void OnSummon(InputValue value){
+			SummonInput(value.isPressed);
+		}
 #endif
 
 
@@ -112,6 +116,10 @@ namespace StarterAssets
         {
             kick = kickState;
         }
+
+		public void SummonInput(bool summonState){
+			summon = summonState;
+		}
 
         private void OnApplicationFocus(bool hasFocus)
 		{

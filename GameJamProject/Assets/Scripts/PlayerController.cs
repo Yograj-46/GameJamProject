@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private StarterAssetsInputs _input;
 
     [SerializeField]
-    private Animator playerAnim;
+    public Animator playerAnim;
 
     [SerializeField] EnemyHealth enemyHealth;
 
@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     //Kick Parameters
     public bool isKicking;
 
+    //Summoning parameter
+    public bool summoning;
+
     //Attack Parameters
     public bool isAttacking;
     private float timeSinceAttack;
@@ -46,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
     // Player Health
     PlayerHealth playerHealth;
+
 
     [Header("PowerUps")]
     public PowerUpType currentPowerUp = PowerUpType.None;
@@ -73,7 +77,7 @@ public class PlayerController : MonoBehaviour
         Kick();
 
         UsePowerUps(); //Activated when player has powerup
-        //CollectOrb();
+        CollectOrb();
     }
     public void CheckEnemy()
     {
@@ -295,9 +299,11 @@ public class PlayerController : MonoBehaviour
     //Collecting Orb Animation
     private void CollectOrb()
     {
-        if (Input.GetKey(KeyCode.V))
+        if (_input.summon)
         {
+            summoning = !summoning;
             playerAnim.SetTrigger("Summoning");
+            _input.summon = false;
         }
     }
 

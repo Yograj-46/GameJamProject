@@ -6,39 +6,37 @@ using UnityEngine.UI;
 public class Orb : MonoBehaviour
 {
     public Transform player;
+    private PlayerController playerController;
     public float range;
     public float distance;
-    public GameObject summoningButton;
+    public float speed;
     private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        summoningButton = GameObject.Find("Summoning_Button");
+        MoveToPlayer();
+    }
+
+    public void MoveToPlayer(){
         distance = Vector3.Distance(player.position, transform.position);
-        Vector3 target = (player.position - transform.position).normalized;
-        
-        if(distance <= range){
-            //summoningButton.gameObject.SetActive(true); //Enable button when player is close to the orb
-            if(Input.GetKey(KeyCode.M)){
-                transform.Translate(target * 5 * Time.deltaTime);
-            }
-        }
-        else{
-            //summoningButton.gameObject.SetActive(false); //Disable button when player goes far from orb
+        if(distance <= range && playerController.summoning){
+            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
     }
 
     private void OnTriggerEnter(Collider other){
         if(other.gameObject.name == "Player"){
             Destroy(gameObject);
+            playerController.summoning = false;
+            playerController.playerAnim.SetTrigger("ReturnToIdle");
+            gameManager.UpdateOrbCount(1);
         }
-        gameManager.UpdateCount(1);
     }
 }

@@ -6,20 +6,27 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;
     public TextMeshProUGUI orbsText;
-    private int count = 0;
+    public GameObject door;
+    public int count = 0;
+    public int maxCount = 2;
 
     void Start(){
-
+        count = 0;
     }
 
     void Update(){
-        
+        ActivateDoor();
     }
     
-    public void UpdateCount(int countToAdd){
+    public void UpdateOrbCount(int countToAdd){
         count += countToAdd;
-        orbsText.text = "Collected Orbs:" + count;
+        orbsText.text = count + " / " + maxCount;
+    }
+
+    public void ActivateDoor(){
+        if(count == maxCount){
+            door.gameObject.SetActive(true);
+        }
     }
 }
