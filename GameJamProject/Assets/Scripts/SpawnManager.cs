@@ -12,9 +12,9 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("InstantiateEagles", 0f, 25f);
-        for(int i = 0; i < 6; i++)
+        for(int i = 0; i < 10; i++)
         {
-            InstantiatePotions();
+            Instantiate(potions, spawnPositions[i], potions.transform.rotation);
         }
     }
 
@@ -22,11 +22,6 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         
-    }
-    void InstantiatePotions(){
-
-        int ind = Random.Range(0, 9);
-        Instantiate(potions, spawnPositions[ind], potions.transform.rotation);
     }
 
     void InstantiateEagles(){

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Potion : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Potion : MonoBehaviour
     public GameObject player;
     public MeshRenderer mesh;
     public GameObject swordHand;
+    public Slider greenHealth;
+    public Slider redHealth;
     private void OnCollisionEnter(Collision collision)
     {
         rb.useGravity = false;
@@ -35,9 +38,15 @@ public class Potion : MonoBehaviour
 
             animator.SetTrigger("Picking");
             Invoke("potionHandActive", 1.47f);
+            Invoke("increaseHealth", 2f);
             Invoke("potionHandInactive", 3.8f);
 
         }
+    }
+    void increaseHealth()
+    {
+        greenHealth.value += 20;
+        redHealth.value += 20;
     }
     void potionHandActive()
     {
