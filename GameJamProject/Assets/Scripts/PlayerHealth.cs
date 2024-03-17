@@ -45,8 +45,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void UpdateDamage()
     {
-        if (healthSlider.value != damageSlider.value)
+        if (healthSlider.value < damageSlider.value)
             damageSlider.value -= speed;
+        if (healthSlider.value > damageSlider.value)
+            damageSlider.value += speed;
 
         if (healthSlider.value < 20)
         {

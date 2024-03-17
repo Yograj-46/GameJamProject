@@ -38,15 +38,14 @@ public class Potion : MonoBehaviour
 
             animator.SetTrigger("Picking");
             Invoke("potionHandActive", 1.47f);
-            Invoke("increaseHealth", 2f);
+            Invoke("increaseHealth", 2.37f);
             Invoke("potionHandInactive", 3.8f);
 
         }
     }
     void increaseHealth()
     {
-        greenHealth.value += 20;
-        redHealth.value += 20;
+        greenHealth.value += 5;
     }
     void potionHandActive()
     {
