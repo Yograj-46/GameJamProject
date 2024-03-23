@@ -16,10 +16,10 @@ namespace StarterAssets
     {
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
-        public float MoveSpeed = 2.0f;
+        public static float MoveSpeed = 2.0f;
 
         [Tooltip("Sprint speed of the character in m/s")]
-        public float SprintSpeed = 5.335f;
+        public static float SprintSpeed = 5.335f;
 
         [Tooltip("How fast the character turns to face movement direction")]
         [Range(0.0f, 0.3f)]
@@ -223,7 +223,7 @@ namespace StarterAssets
 
         private void Move()
         {
-            if (playerController.isEquipping || playerController.isBlocking || playerController.isKicking || playerController.isAttacking || !playerHealth.isAlive)
+            if (playerController.isEquipping || playerController.isBlocking || playerController.isKicking || playerController.isAttacking || !PlayerHealth.isAlive)
                 return;
 
 

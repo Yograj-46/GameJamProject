@@ -6,20 +6,16 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI orbsText;
+    public static TextMeshProUGUI orbsText;
     public GameObject door;
-    public int count = 0;
-    public int maxCount = 2;
+    public static int count = 0, maxCount = 2;
 
     void Start(){
         count = 0;
-    }
-
-    void Update(){
-        ActivateDoor();
+        orbsText = GameObject.Find("OrbCount").GetComponentInChildren<TextMeshProUGUI>();
     }
     
-    public void UpdateOrbCount(int countToAdd){
+    public static void UpdateOrbCount(int countToAdd){
         count += countToAdd;
         orbsText.text = count + " / " + maxCount;
     }

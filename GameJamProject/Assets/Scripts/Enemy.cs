@@ -5,10 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     //[SerializeField] NavMeshAgent enemy;
-    [SerializeField] Animator enemyAnim;
     [SerializeField] Transform player;
     [SerializeField] PlayerController playerController;
-    //public ThirdPersonCharacter character;
 
     public float chasingSpeed;
     public bool isChasing;
@@ -28,52 +26,45 @@ public class Enemy : MonoBehaviour
 
     //Particle after death
     public ParticleSystem deadParticle;
-    void Start()
-    {
+    void Start() {
         player = GameObject.Find("Player").transform;
         playerController = player.GetComponent<PlayerController>();
         health = GetComponent<EnemyHealth>();
-        enemyAnim = GetComponent<Animator>();
-        // enemy.updateRotation = false;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         currentDistance = Vector3.Distance(player.position, transform.position);
         StartCoroutine("AfterEffects");
     }
     
     public void Attack()
     {
-        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
         Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, playerMask);
-        foreach (Collider col in colInfo)
-        {
+        foreach (Collider col in colInfo) {
             if (!playerController.isBlocking)
             {
-                playerHealth.TakeDamage(5);
+                PlayerHealth.TakeDamage(5);
             }
             else if (playerController.isBlocking)
             {
-                playerHealth.TakeDamage(10);
+                PlayerHealth.TakeDamage(10);
             }
         }
     }
-    void OnDrawGizmosSelected()
-    {
+    void OnDrawGizmosSelected() {
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    private void OnCollisionEnter(Collision collision){
+    private void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.name == "Ground"){
             isGrounded = true;
         }
     }
 
-    IEnumerator AfterEffects(){
+    IEnumerator AfterEffects() {
         if(!health.isAlive){
             yield return new WaitForSeconds(2.5f);
             deadParticle.gameObject.SetActive(true);

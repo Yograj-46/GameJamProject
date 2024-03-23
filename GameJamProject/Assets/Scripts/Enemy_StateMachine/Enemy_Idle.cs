@@ -30,7 +30,7 @@ public class Enemy_Idle : StateMachineBehaviour
             animator.SetBool("isRoaming", true);
         }
         
-        if (enemyHealth.isAlive && playerHealth.isAlive)
+        if (enemyHealth.isAlive && PlayerHealth.isAlive)
         {
             if (Vector3.Distance(player.position, rb.transform.position) <= enemy.chaseRange )
             {

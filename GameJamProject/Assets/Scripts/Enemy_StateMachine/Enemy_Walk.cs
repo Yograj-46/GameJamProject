@@ -60,7 +60,7 @@ public class Enemy_Walk : StateMachineBehaviour
             animator.SetBool("isRoaming", false);
         }
 
-        if(Vector3.Distance(rb.transform.position, player.transform.position)<=attackRange && playerHealth.isAlive)
+        if(Vector3.Distance(rb.transform.position, player.transform.position)<=attackRange && PlayerHealth.isAlive)
         {
             animator.SetBool("isRoaming", false);
 

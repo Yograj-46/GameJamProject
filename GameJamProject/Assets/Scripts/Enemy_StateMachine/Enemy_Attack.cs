@@ -19,11 +19,11 @@ public class Enemy_Attack : StateMachineBehaviour
     {
         rb.constraints = RigidbodyConstraints.FreezeRotation;
 
-        if (Vector3.Distance(player.position, rb.transform.position) >= 2 && playerHealth.isAlive)
+        if (Vector3.Distance(player.position, rb.transform.position) >= 2 && PlayerHealth.isAlive)
         {
             animator.SetTrigger("BackToRun");
         }
-        if (!playerHealth.isAlive)
+        if (!PlayerHealth.isAlive)
         {
             animator.SetTrigger("Idle");
         }

@@ -8,20 +8,21 @@ using random = UnityEngine.Random;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public ParticleSystem bloodSplash;
-    public Slider healthSlider;
-    public Slider damageSlider;
+    public static ParticleSystem bloodSplash;
+    public static Slider healthSlider;
+    public static Slider damageSlider;
     public GameObject healthCircle;
     float speed = 0.5f;
-    int maxHealth = 100, minHealth = 1;
-    Animator animator;
-    public bool isAlive = true;
+    static int maxHealth = 100, minHealth = 1;
+    static Animator animator;
+    public static bool isAlive = true;
 
     [SerializeField] Volume volume;
 
     
-    private void Start()
-    {
+    private void Start(){
+        GetObjects();
+
         bloodSplash.Stop();
         healthSlider.value = maxHealth;
         healthSlider.maxValue = maxHealth;
@@ -29,13 +30,17 @@ public class PlayerHealth : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void bloodStop()
-    {
+    void GetObjects(){
+        healthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
+        damageSlider = GameObject.Find("DamageSlider").GetComponent<Slider>();
+        bloodSplash = GameObject.Find("BloodSplash").GetComponent<ParticleSystem>();
+    }
+
+    void bloodStop(){
         bloodSplash.Stop();
     }
 
-    private void Update()
-    {
+    private void Update(){
         UpdateDamage();
 
         bool isLowhealth = healthSlider.value <= 12;
@@ -43,44 +48,36 @@ public class PlayerHealth : MonoBehaviour
             PlayerOut();
     }
 
-    private void UpdateDamage()
-    {
+    private void UpdateDamage(){
         if (healthSlider.value < damageSlider.value)
             damageSlider.value -= speed;
         if (healthSlider.value > damageSlider.value)
             damageSlider.value += speed;
 
-        if (healthSlider.value < 20)
-        {
+        if (healthSlider.value < 20) {
             volume.enabled = true;
             if(!AudioManager.instance.audioSource.isPlaying)
             AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.heartBeatfx);
         }
-
-        else
-        {
-            volume.enabled = false;
-        }
+        else volume.enabled = false;
     }
 
-    public void TakeDamage(int damage)
-    {
+    public static void TakeDamage(int damage){
         healthSlider.value -= damage;
-        if(healthSlider.value > minHealth)
-        {
+        if(healthSlider.value > minHealth) {
             animator.SetTrigger("Hit");
             AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.getHit);
             int rand = random.Range(1, 3);
             if (rand == 1)
             {
-                bloodSplash.Play();
-                Invoke("bloodStop", 0.25f);
+                var bs = new PlayerHealth(); //Var bs denotes bloodStop roughly
+                if(bloodSplash != null) bloodSplash.Play();
+                bs.Invoke("bloodStop", 0.25f);
             }
         }
     }
 
-    void PlayerOut()
-    {
+    void PlayerOut(){
         // death screen and reload scene
         if(healthSlider.value == 0){
             isAlive = false;

@@ -9,19 +9,12 @@ public class SpawnManager : MonoBehaviour
     public GameObject eagles;
     public int orbsPerSpawn;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         InvokeRepeating("InstantiateEagles", 0f, 25f);
         for(int i = 0; i < 10; i++)
         {
             Instantiate(potions, spawnPositions[i], potions.transform.rotation);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void InstantiateEagles(){

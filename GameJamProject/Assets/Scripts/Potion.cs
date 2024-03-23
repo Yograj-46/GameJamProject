@@ -31,6 +31,9 @@ public class Potion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+    public void PickUp(){
         bool posCheckx= (gameObject.transform.position.x)-1< player.transform.position.x && player.transform.position.x < (gameObject.transform.position.x)+1;
        bool posCheckz= (gameObject.transform.position.z)-1< player.transform.position.z &&  player.transform.position.z < (gameObject.transform.position.z) +1;
         if (posCheckx && posCheckz && Input.GetKey(KeyCode.P) && !(swordHand.activeInHierarchy))
@@ -43,18 +46,16 @@ public class Potion : MonoBehaviour
 
         }
     }
-    void increaseHealth()
-    {
+        
+    void increaseHealth(){
         greenHealth.value += 5;
     }
-    void potionHandActive()
-    {
+    void potionHandActive(){
         potionHand.SetActive(true);
         Destroy(mesh);
     }
 
-    void potionHandInactive()
-    {
+    void potionHandInactive(){
         potionHand.SetActive(false);
         Destroy(gameObject);
     }

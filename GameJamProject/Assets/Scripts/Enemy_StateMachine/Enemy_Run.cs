@@ -22,7 +22,7 @@ public class Enemy_Run : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         EnemyHealth enemyHealth = animator.GetComponent<EnemyHealth>();
-        if (enemyHealth.isAlive && playerHealth.isAlive)
+        if (enemyHealth.isAlive && PlayerHealth.isAlive)
         {
             Vector3 targetDirection = player.position - rb.transform.position;
             targetDirection.y = 0f;

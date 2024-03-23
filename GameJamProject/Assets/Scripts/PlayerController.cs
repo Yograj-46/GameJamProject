@@ -5,163 +5,111 @@ using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
-    //public GameObject potionHand;
-    //levlling
-    public VisualEffect levelUp;
-    //sfx
-    public AudioManager sfx;
     //Third Person Controller References
-    private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs _input;
 
-    [SerializeField]
-    public Animator playerAnim;
-
-    [SerializeField] EnemyHealth enemyHealth;
-
-    //Equip-Unequip parameters
-    [SerializeField]
-    private GameObject sword;
-    [SerializeField]
-    private GameObject swordOnShoulder;
+    [Header("Sword Equip Unequip")]
+    [SerializeField] private GameObject sword;
+    [SerializeField] private GameObject swordOnShoulder;
     public bool isEquipping;
     public bool isEquipped;
 
-    //Blocking Parameters
-    public bool isBlocking;
-
-    //Kick Parameters
-    public bool isKicking;
-
-    //Summoning parameter
-    public bool summoning;
-
-    //Attack Parameters
-    public bool isAttacking;
-    private float timeSinceAttack;
-    public int currentAttack = 0;
-
-
-    //Attack Range
+    [Header("Attack Parameters")]
     [SerializeField] Transform attackPoint;
     [SerializeField] float attackRange;
     [SerializeField] LayerMask enemyMask;
-
-    // Player Health
-    PlayerHealth playerHealth;
-
-
+    private float timeSinceAttack;
+    public int currentAttack = 0;
+    public bool isAttacking;
+    
     [Header("PowerUps")]
     public PowerUpType currentPowerUp = PowerUpType.None;
     public Coroutine powerUpCountDown;
     public bool hasPowerUp;
-    private void Start()
-    {
+    
+    [Header ("Script References")]
+    [SerializeField] EnemyHealth enemyHealth;  //Enemy health script reference
+    [SerializeField] public AudioManager sfx; //Audio Manager script reference
+
+    [Header("Others")]
+    [SerializeField] public static Animator playerAnim;
+    public VisualEffect levelUp; //For LevelUp Effect
+    public bool isBlocking;
+    public bool isKicking;
+    public static bool summoning;
+
+    private void Start(){
         levelUp.enabled = false;
         _input = GetComponent<StarterAssetsInputs>();
-        thirdPersonController = GetComponent<ThirdPersonController>();
-        playerHealth = GetComponent<PlayerHealth>();
+        playerAnim = GetComponent<Animator>();
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            Power();
-        }
+    private void Update(){
         timeSinceAttack += Time.deltaTime;
         CheckEnemy();
-        LightAttack();
-        HeavyAttack();
-        Equip();
-        Block();
-        Kick();
 
         UsePowerUps(); //Activated when player has powerup
-        CollectOrb();
     }
-    public void CheckEnemy()
-    {
+    public void CheckEnemy(){
         Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
-        foreach (Collider col in colInfo)
-        {
+        foreach (Collider col in colInfo){
             enemyHealth = col.GetComponent<EnemyHealth>();
         }
-
     }
-    private void Equip()
-    {
-        if (_input.equip && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
-        {
+    public void Equip(){
+        if (_input.equip && playerAnim.GetBool("Grounded") && PlayerHealth.isAlive)
             isEquipping = true;
             playerAnim.SetTrigger("Equip");
             _input.equip = false;
-        }
-       
     }
-
-    public void ActiveWeapon()
-    {
-        if (!isEquipped)
-        {
+    public void ActiveWeapon(){
+        if (!isEquipped) {
             sword.SetActive(true);
             swordOnShoulder.SetActive(false);
             isEquipped = !isEquipped;
             sfx.clip(sfx.swordDraw);
         }
-        else
-        {
+        else {
             sword.SetActive(false);
             swordOnShoulder.SetActive(true);
             isEquipped = !isEquipped;
             sfx.clip(sfx.swordKeep);
         }
     }
-
-    void Power()
-    {
+    void Power(){
         levelUp.enabled = true;
         playerAnim.SetTrigger("PowerUp");
         levelUp.Play();
     }
-    public void Equipped()
-    {
+    public void Equipped(){
         isEquipping = false;
     }
 
-    private void Block()
-    {
-        if (Input.GetKey(KeyCode.Q) && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
-        {
+    public void Block(){
+        if (Input.GetKey(KeyCode.Q) && playerAnim.GetBool("Grounded") && PlayerHealth.isAlive){
             playerAnim.SetBool("Block", true);
             isBlocking = true;
         }
-        else
-        {
+        else{
             playerAnim.SetBool("Block", false);
             isBlocking = false;
         }
     }
 
-    public void Kick()
-    {
-        if (_input.kick && playerAnim.GetBool("Grounded") && playerHealth.isAlive)
-        {
+    public void Kick(){
+        if (_input.kick && playerAnim.GetBool("Grounded") && PlayerHealth.isAlive){
             playerAnim.SetTrigger("Kicking");
             sfx.clip(sfx.whip);
             isKicking = true;
             _input.kick = false;
         }
-        else
-        {
+        else{
             isKicking = false;
         }
     }
 
-    private void LightAttack()
-    {
+    public void LightAttack() {
 
-        if (_input.lightAttack && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && playerHealth.isAlive)
-        {
+        if (_input.lightAttack && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && PlayerHealth.isAlive) {
             if (!isEquipped)
                 return;
 
@@ -171,8 +119,7 @@ public class PlayerController : MonoBehaviour
             if (currentAttack > 3)
                 currentAttack = 1;
 
-
-            //Reset
+            //Reset Attack
             if (timeSinceAttack > 1.0f)
                 currentAttack = 1;
 
@@ -184,22 +131,15 @@ public class PlayerController : MonoBehaviour
             timeSinceAttack = 0;
             _input.lightAttack = false;
         }
-
-
     }
-    public void AttackEnemy(int damage)
-    {
-        if (enemyHealth.blockCount > 0 && !enemyHealth.isBlocking && playerHealth.isAlive)
-        {
+    public void AttackEnemy(int damage) {
+        if (enemyHealth.blockCount > 0 && !enemyHealth.isBlocking && PlayerHealth.isAlive) {
             Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
-            foreach (Collider col in colInfo)
-            {
+            foreach (Collider col in colInfo) {
                 col.GetComponent<EnemyHealth>().TakeDamage(damage);
-                if (enemyHealth.blockCount == 0)
-                {
+                if (enemyHealth.blockCount == 0) {
                     enemyHealth.isBlocking = true;
-                    if (enemyHealth.isBlocking)
-                    {
+                    if (enemyHealth.isBlocking) {
                         Animator enemy = col.GetComponent<Animator>();
                         enemy.SetTrigger("IsBlocking");
                         damage = 0;
@@ -208,16 +148,9 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    //void OnDrawGizmosSelected()
-    //{
-    //    if (attackPoint == null)
-    //        return;
-    //    Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    //}
-    private void HeavyAttack()
-    {
+    public void HeavyAttack() {
 
-        if (_input.heavytAttack && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && playerHealth.isAlive)
+        if (_input.heavyAttack && playerAnim.GetBool("Grounded") && timeSinceAttack > 0.8f && PlayerHealth.isAlive)
         {
             if (!isEquipped)
                 return;
@@ -239,12 +172,11 @@ public class PlayerController : MonoBehaviour
 
             //Reset Timer
             timeSinceAttack = 0;
-            _input.heavytAttack = false;
+            _input.heavyAttack = false;
         }
     }
     //This will be used at animation event
-    public void ResetAttack()
-    {
+    public void ResetAttack() {
         isAttacking = false;
     }
     public void LightAttackReaction()
@@ -252,10 +184,8 @@ public class PlayerController : MonoBehaviour
 
         Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
 
-        foreach (Collider col in colInfo)
-        {
-            if (!enemyHealth.isBlocking)
-            {
+        foreach (Collider col in colInfo) {
+            if (!enemyHealth.isBlocking) {
                 AttackEnemy(10);
                 Animator animator = col.GetComponent<Animator>();
                 animator.SetTrigger("LightAttack");
@@ -266,10 +196,8 @@ public class PlayerController : MonoBehaviour
     {
         Collider[] colInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask);
 
-        foreach (Collider col in colInfo)
-        {
-            if (!enemyHealth.isBlocking)
-            {
+        foreach (Collider col in colInfo) {
+            if (!enemyHealth.isBlocking) {
                 AttackEnemy(20);
                 Animator animator = col.GetComponent<Animator>();
                 animator.SetTrigger("HeavyAttack");
@@ -278,18 +206,14 @@ public class PlayerController : MonoBehaviour
     }
 
     //This method checks whether player has powerup or not.
-    private void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log(gameObject.transform.position);
-        if (other.gameObject.CompareTag("PowerUp"))
-        {
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("PowerUp")) {
             hasPowerUp = true;
-            currentPowerUp = other.gameObject.GetComponent<PowerUp>().powerUpType;
+            currentPowerUp = PowerUp.powerUpType;
             Destroy(other.gameObject);
         }
 
-        if (powerUpCountDown != null)
-        {
+        if (powerUpCountDown != null) {
             StopCoroutine(powerUpCountDown);
         }
 
@@ -297,68 +221,59 @@ public class PlayerController : MonoBehaviour
     }
 
     //Collecting Orb Animation
-    private void CollectOrb()
-    {
-        if (_input.summon)
-        {
+    public void CollectOrb(){
+        if (_input.summon) {
             summoning = !summoning;
-            playerAnim.SetTrigger("Summoning");
             _input.summon = false;
         }
+        if(summoning){
+            playerAnim.SetTrigger("Summoning");
+        }
+        else playerAnim.SetTrigger("ReturnToIdle");
     }
 
     //PowerUp Abilities
-    private void UsePowerUps()
-    {
-        if (currentPowerUp == PowerUpType.MovementSpeed)
-        {
-            MovementSpeedIncrease();
+    private void UsePowerUps(){
+        if (currentPowerUp == PowerUpType.MovementSpeed) {
+            PowerUps.MovementSpeedIncrease();
         }
 
-        if (currentPowerUp == PowerUpType.ExtraArmor)
-        {
-            IncreaseArmor();
+        if (currentPowerUp == PowerUpType.ExtraArmor) {
+            PowerUps.IncreaseArmor();
         }
 
-        if (currentPowerUp == PowerUpType.Attack)
-        {
-            EfficientAttack();
+        if (currentPowerUp == PowerUpType.Attack) {
+            PowerUps.EfficientAttack();
         }
 
-        if (currentPowerUp == PowerUpType.InstantHealing)
-        {
-            HealingOverTime();
+        if (currentPowerUp == PowerUpType.InstantHealing) {
+            PowerUps.HealingOverTime();
         }
     }
-    private void MovementSpeedIncrease()
-    {
-        thirdPersonController.MoveSpeed = 5f;
-        thirdPersonController.SprintSpeed = 10f;
-    }
-
-    private void IncreaseArmor()
-    {
-        playerHealth.TakeDamage(5);
-    }
-
-    private void EfficientAttack()
-    {
-        AttackEnemy(25);
-    }
-
-    private void HealingOverTime()
-    {
-        float healingSpeed = 15f;
-        playerHealth.healthSlider.value += healingSpeed;
-    }
-
-    IEnumerator PowerUpCountDownRoutine()
-    {
+    IEnumerator PowerUpCountDownRoutine(){
         yield return new WaitForSeconds(10f);
         hasPowerUp = false;
         currentPowerUp = PowerUpType.None;
     }
+}
 
+public class PowerUps
+{
+    public static void MovementSpeedIncrease(){
+        ThirdPersonController.MoveSpeed = 5f;
+        ThirdPersonController.SprintSpeed = 10f;
+    }
 
+    public static void IncreaseArmor(){
+        PlayerHealth.TakeDamage(5);
+    }
 
+    public static void EfficientAttack(){
+        EnemyHealth.currentHealth -= 25;
+    }
+
+    public static void HealingOverTime(){
+        float healingSpeed = 15f;
+        PlayerHealth.healthSlider.value += healingSpeed;
+    }
 }

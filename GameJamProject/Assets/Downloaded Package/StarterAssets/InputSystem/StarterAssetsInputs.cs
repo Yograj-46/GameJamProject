@@ -14,7 +14,7 @@ namespace StarterAssets
 		public bool sprint;
 		public bool equip;
 		public bool lightAttack;
-		public bool heavytAttack;
+		public bool heavyAttack;
 		public bool pickup;
 		public bool kick;
 		public bool summon;
@@ -106,7 +106,7 @@ namespace StarterAssets
 		}
 		public void HeavyAttackInput(bool heavyAttackState)
 		{
-			heavytAttack = heavyAttackState;
+			heavyAttack = heavyAttackState;
 		}
 		public void PickupInput(bool pickupState)
 		{

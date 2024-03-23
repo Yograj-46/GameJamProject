@@ -16,8 +16,7 @@ public class OrbManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         foreach (Transform orbTransform in transform)
         {
             float distance = Vector3.Distance(orbTransform.position, player.position);

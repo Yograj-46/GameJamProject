@@ -6,17 +6,11 @@ public class MiniMap : MonoBehaviour
 {
     public Transform player;
     public Vector3 offset;
-    // Start is called before the first frame update
-    private void LateUpdate()
-    {
+    private void LateUpdate(){
         Vector3 newPosition = player.position;
         newPosition.y = transform.position.y;
         transform.position = newPosition;
 
         transform.rotation = Quaternion.Euler(90f, player.eulerAngles.y, 0f);
     }
-    //private void Update()
-    //{
-    //    transform.position = player.position + offset;
-    //}
 }

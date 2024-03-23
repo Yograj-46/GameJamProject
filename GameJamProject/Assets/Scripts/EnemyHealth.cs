@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth = 100;
-    public int currentHealth;
+    public static int currentHealth;
     public int blockCount = 4;
     public bool isBlocking = false;
     public bool isAlive = true;
@@ -15,16 +15,14 @@ public class EnemyHealth : MonoBehaviour
     public Slider healthSlider;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         SetMaxHealth(maxHealth); //Max health at starting
         rb = GetComponent<Rigidbody>();
     }
 
-    public void TakeDamage(int damage)
-    {
+    public void TakeDamage(int damage) {
         currentHealth -= damage;
         SetHealth(currentHealth); //Current health of enemy
         blockCount--;
@@ -37,8 +35,7 @@ public class EnemyHealth : MonoBehaviour
             rb.freezeRotation = true;
             rb.isKinematic = true;
             animator.SetTrigger("Death");
-            animator.GetComponent<CapsuleCollider>().enabled = false;
-            
+            animator.GetComponent<CapsuleCollider>().enabled = false; 
         }
     }
 
@@ -52,8 +49,7 @@ public class EnemyHealth : MonoBehaviour
     public void SetHealth(int health){
         healthSlider.value = health;
     }
-    public void DisableObject()
-    {
+    public void DisableObject(){
         currentHealth = maxHealth;
         gameObject.SetActive(false);
     }

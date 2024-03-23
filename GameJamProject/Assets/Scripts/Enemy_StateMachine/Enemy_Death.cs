@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy_Death : StateMachineBehaviour
 {
     Rigidbody rb;
-    EnemyHealth enemyHealth;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -14,17 +13,15 @@ public class Enemy_Death : StateMachineBehaviour
        // player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody>();
         //rb.useGravity = false;
-        enemyHealth = animator.GetComponent<EnemyHealth>();
-
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (enemyHealth.currentHealth <= 0)
+        if (EnemyHealth.currentHealth <= 0)
         {
-            Debug.Log(enemyHealth.currentHealth);
-            Debug.Log("current health" + enemyHealth.currentHealth);
+            Debug.Log(EnemyHealth.currentHealth);
+            Debug.Log("current health" + EnemyHealth.currentHealth);
         }
     }
 

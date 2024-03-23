@@ -11,22 +11,18 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] GameObject minotaur;
     GameObject[] pool;
 
-    private void Awake()
-    {
+    private void Awake(){
         PopulatePool();
     }
-    void Start()
-    {
+    void Start(){
         StartCoroutine(SpawnEnemy());
 
     }
-    void PopulatePool()
-    {
+    void PopulatePool(){
         pool = new GameObject[5];
         enemyPosition = new Vector3[pool.Length];
 
-        for (int i = 0; i < pool.Length; i++)
-        {
+        for (int i = 0; i < pool.Length; i++){
             int postion = UnityEngine.Random.Range(20, 30);
             enemyPosition[i] = new Vector3(player.position.x + postion, player.position.y, player.position.z + postion);
             pool[i] = Instantiate(minotaur, transform);
@@ -34,8 +30,7 @@ public class ObjectPool : MonoBehaviour
         }
 
     }
-    void ObjectInPool()
-    {
+    void ObjectInPool(){
         for (int i = 0; i < pool.Length; i++)
         {
             if (!pool[i].activeInHierarchy)
@@ -46,8 +41,7 @@ public class ObjectPool : MonoBehaviour
             }
         }
     }
-    IEnumerator SpawnEnemy()
-    {
+    IEnumerator SpawnEnemy(){
         ObjectInPool();
         yield return new WaitForSeconds(5);
         StartCoroutine(SpawnEnemy());
