@@ -443,6 +443,39 @@ Transform:
   m_Father: {fileID: 6190826044881822178}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &385938273670022550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3613254840945023494}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3614958799102093382}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (17) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3614958799102093382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3613254840945023494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385938273670022550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410854265127912272
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +604,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &426549350786591363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 1076760564055353633}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080681373606609175}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (5) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080681373606609175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 1076760564055353633}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426549350786591363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &541071976687035725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1110,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1045303973354446357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6539095567435743357}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6535212583950807613}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (20) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6535212583950807613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6539095567435743357}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045303973354446357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073435481966470606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1399,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1229486731410238087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 8276455871413414592}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8274754358186722038}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (7) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8274754358186722038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 8276455871413414592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229486731410238087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1337535183114562196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1547,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1402416934424748446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5348325860507791213}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5347787016379571501}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (8) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5347787016379571501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5348325860507791213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402416934424748446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495499091430278266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1701,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1000, y: 50, z: 100}
   m_Center: {x: -500, y: 25, z: -50}
+--- !u!1 &1575697877803007348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3638524395834410065}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3634571289527039505}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (10) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3634571289527039505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3638524395834410065}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575697877803007348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1740292271874802615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1836,39 @@ CapsuleCollider:
   m_Height: 46.725887
   m_Direction: 1
   m_Center: {x: 0, y: 22.862944, z: 0}
+--- !u!1 &1796732684048328078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 2820717786847764701}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2822356313591302379}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (9) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2822356313591302379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 2820717786847764701}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796732684048328078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852669290541341046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +1960,39 @@ Transform:
   - {fileID: 8802843199306435520}
   m_Father: {fileID: 6190826044881822178}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1893972439747551200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6599292625778062540}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6600957983620925068}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (23) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6600957983620925068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6599292625778062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893972439747551200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1931721401888619942
 GameObject:
@@ -1829,6 +2093,39 @@ CapsuleCollider:
   m_Height: 46.725887
   m_Direction: 1
   m_Center: {x: 0, y: 22.862944, z: 0}
+--- !u!1 &2101785342316167526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 2832011301439496884}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2829217943654386306}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (11) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2829217943654386306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 2832011301439496884}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101785342316167526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2111771012576675553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,6 +2286,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2241166595439514314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1598523089014882780}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1594606019997348764}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (27) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1594606019997348764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1598523089014882780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241166595439514314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2252525483778686522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,6 +2360,171 @@ Transform:
   - {fileID: 824163693235215931}
   m_Father: {fileID: 6190826044881822178}
   m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2280187271797183394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 5030388822891075151}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5026494404590550649}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (4) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5026494404590550649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 5030388822891075151}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2280187271797183394}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2350790589451488251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1569443867125300385}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570064243790778081}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (12) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1570064243790778081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1569443867125300385}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350790589451488251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2462759356344259256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 7207548638552422615}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7208132907206660321}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7208132907206660321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 7207548638552422615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2462759356344259256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2628987075655836523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 6181177735135897470}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6181684832352538440}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (2) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6181684832352538440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 6181177735135897470}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628987075655836523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2677028288235248885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 7045299273700199254}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7046967523747095392}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (12) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7046967523747095392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 7045299273700199254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2677028288235248885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2883873693814310360
 GameObject:
@@ -2093,6 +2588,39 @@ Transform:
   - {fileID: 1079175093379632163}
   m_Father: {fileID: 5149028284395538665}
   m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2942106131241855613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7955052450589846433}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7955665864418138593}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (30) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7955665864418138593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7955052450589846433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942106131241855613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2944558510557137849
 GameObject:
@@ -2224,6 +2752,105 @@ Transform:
   m_Father: {fileID: 5149028284395538665}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3065935051134607256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 4592689853990086060}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4589932092720453612}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (1) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4589932092720453612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 4592689853990086060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065935051134607256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3174767432490958580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 723056475682704528}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722517631051448016}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (13) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &722517631051448016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 723056475682704528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3174767432490958580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3217008416379151817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3067829005345924317}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3070658643227743901}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (31) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3070658643227743901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3067829005345924317}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217008416379151817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3332782188535636185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,6 +2934,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3358316205969965751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 6114764346144977863}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6112005070099766257}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (8) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6112005070099766257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 6114764346144977863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358316205969965751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3411341331946523881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,6 +3095,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &3505825242002154170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3078905394747163467}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3077170041845346571}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (25) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3077170041845346571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3078905394747163467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3505825242002154170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3620130360036523601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,6 +3956,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 89ede9256fbfe8d70b1fdbe58d46b263, type: 3}
+--- !u!1 &3751562976933519406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2170275972867625418}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2166349627325752202}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (11) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2166349627325752202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2170275972867625418}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3751562976933519406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3876504138421199438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,6 +4176,72 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 7284febd6dd8c0ea88cdde6f21213107, type: 3}
+--- !u!1 &4098406117702534712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2350218795545019762}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2347380871993128754}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (28) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2347380871993128754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2350218795545019762}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4098406117702534712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4191705921457124469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1426842594616605079}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424012942711376855}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (18) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1424012942711376855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1426842594616605079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4191705921457124469}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4221861355806257600
 GameObject:
   m_ObjectHideFlags: 0
@@ -4834,6 +5626,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &4622534434860369473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 8794609878244337870}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8791746562913933966}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (21) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8791746562913933966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 8794609878244337870}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622534434860369473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4744983101812540232
 GameObject:
   m_ObjectHideFlags: 0
@@ -5097,6 +5922,39 @@ Transform:
   m_Father: {fileID: 9092553771928871039}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4878877124619552819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 1657459966330988886}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661352114758730080}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (1) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661352114758730080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 1657459966330988886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4878877124619552819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4879943449303660398
 GameObject:
   m_ObjectHideFlags: 0
@@ -5195,6 +6053,72 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 7284febd6dd8c0ea88cdde6f21213107, type: 3}
+--- !u!1 &4939329610498101422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1870995608124066774}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871572655423306134}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (22) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1871572655423306134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1870995608124066774}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939329610498101422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4979877405258642071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 1412822399213131159}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1411156655647718817}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (3) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1411156655647718817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 1412822399213131159}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979877405258642071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5078255110062044269
 GameObject:
   m_ObjectHideFlags: 0
@@ -6049,6 +6973,72 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 89ede9256fbfe8d70b1fdbe58d46b263, type: 3}
+--- !u!1 &6213632490234143660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2766587408096399809}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2768255179621770113}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (24) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2768255179621770113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2766587408096399809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213632490234143660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6258919040869371508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 8329434635464871405}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8328894414955423195}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (10) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8328894414955423195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 8329434635464871405}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258919040869371508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6376790554109514244
 GameObject:
   m_ObjectHideFlags: 0
@@ -6353,6 +7343,105 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 89ede9256fbfe8d70b1fdbe58d46b263, type: 3}
+--- !u!1 &6552365115469299239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 27592823737530291}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 30454802930697715}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (15) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &30454802930697715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 27592823737530291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6552365115469299239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6606642802933477942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1315364154847108263}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319318602786778855}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (7) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1319318602786778855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1315364154847108263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606642802933477942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6615531208198107555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7674028841003325078}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7670075947839726806}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (9) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7670075947839726806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7674028841003325078}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615531208198107555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6621915593257782404
 GameObject:
   m_ObjectHideFlags: 0
@@ -6472,6 +7561,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6727948880937060398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 8759942672331188776}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8763904335891142760}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (19) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8763904335891142760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 8759942672331188776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727948880937060398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6755403262740314015
 GameObject:
   m_ObjectHideFlags: 0
@@ -6570,6 +7692,105 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 7284febd6dd8c0ea88cdde6f21213107, type: 3}
+--- !u!1 &6765213329261646745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6991825921582216783}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6992332497687970831}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (26) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6992332497687970831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6991825921582216783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765213329261646745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6802654701335645225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7768831901904546617}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7772749554027600249}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (16) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7772749554027600249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7768831901904546617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6802654701335645225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6813338608547659426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 570301226222974177}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568623485575186081}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &568623485575186081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 570301226222974177}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813338608547659426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7313897507547412418
 GameObject:
   m_ObjectHideFlags: 0
@@ -6765,6 +7986,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &7731304606160315830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7155068751868672743}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7153366452106102951}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (2) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7153366452106102951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7155068751868672743}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7731304606160315830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7780731194292466174
 GameObject:
   m_ObjectHideFlags: 0
@@ -6815,6 +8069,171 @@ Transform:
   - {fileID: 3785241895870428999}
   m_Father: {fileID: 6190826044881822178}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8103425223489871687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5943501031631592154}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5941861233371883674}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (5) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5941861233371883674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5943501031631592154}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8103425223489871687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8132519451357806123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 667931892083754661}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669573418195399909}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (14) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &669573418195399909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 667931892083754661}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8132519451357806123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8253545712624881251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1131065338364350817}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1133900035213026081}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (6) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1133900035213026081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1131065338364350817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8253545712624881251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8476734593128079350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000010816656516, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 5326166922743630331}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5324500936411767245}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceA (6) (Missing Prefab with guid: ddd082fb4672f6643be6891e17a84358)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5324500936411767245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
+    type: 3}
+  m_PrefabInstance: {fileID: 5326166922743630331}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8476734593128079350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8493358517042092398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5998175767095093629}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5995409209331882813}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (3) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5995409209331882813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5998175767095093629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8493358517042092398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8518445035634090445
 GameObject:
@@ -6914,6 +8333,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 89ede9256fbfe8d70b1fdbe58d46b263, type: 3}
+--- !u!1 &8567816606529840237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 4274516052442941453}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4277316073412049485}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (29) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4277316073412049485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 4274516052442941453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567816606529840237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8720856447949528796
 GameObject:
   m_ObjectHideFlags: 0
@@ -7227,6 +8679,39 @@ Transform:
   m_Father: {fileID: 6190826044881822178}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9063841369187535593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1000014143113872, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3131943449781603183}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3132482260654242095}
+  m_Layer: 0
+  m_Name: 'RHEF_SpruceTerrainA (4) (Missing Prefab with guid: 156f975b5c133c846bd7dd4d6c726faf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3132482260654242095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3131943449781603183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9063841369187535593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917390402755849263}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9147260073370009391
 GameObject:
   m_ObjectHideFlags: 0
@@ -7501,12 +8986,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &30454802930697715 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 27592823737530291}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &35280243464546056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8294,12 +9773,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &568623485575186081 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 570301226222974177}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &647488011168330112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8623,12 +10096,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &669573418195399909 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 667931892083754661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &716188225745961559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8781,12 +10248,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &722517631051448016 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 723056475682704528}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &747253827275381032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9418,12 +10879,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &1080681373606609175 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 1076760564055353633}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1131065338364350817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9485,12 +10940,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &1133900035213026081 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1131065338364350817}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1268695478408461352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9619,12 +11068,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &1319318602786778855 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1315364154847108263}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1349307344891502568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9786,12 +11229,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &1411156655647718817 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 1412822399213131159}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1426842594616605079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9865,12 +11302,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &1424012942711376855 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1426842594616605079}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1464813600837027275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9999,12 +11430,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &1570064243790778081 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1569443867125300385}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1583986996876645604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10145,12 +11570,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &1594606019997348764 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1598523089014882780}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1657459966330988886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10220,12 +11639,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &1661352114758730080 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 1657459966330988886}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1823602234158366748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10394,12 +11807,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &1871572655423306134 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1870995608124066774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1908703464765665645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10746,12 +12153,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &2166349627325752202 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 2170275972867625418}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2182960539041550584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10880,12 +12281,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &2347380871993128754 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 2350218795545019762}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2353544065987842610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11484,12 +12879,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &2768255179621770113 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 2766587408096399809}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2791614319683212380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11706,12 +13095,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &2822356313591302379 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 2820717786847764701}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2832011301439496884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11781,12 +13164,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &2829217943654386306 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 2832011301439496884}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2894774845032331271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12276,12 +13653,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &3070658643227743901 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 3067829005345924317}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3078905394747163467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12347,12 +13718,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &3077170041845346571 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 3078905394747163467}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3098921027774075079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12656,12 +14021,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &3132482260654242095 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 3131943449781603183}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3139166505870010642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13111,12 +14470,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &3614958799102093382 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 3613254840945023494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3617865274124222729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13340,12 +14693,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &3634571289527039505 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 3638524395834410065}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3724183193152405330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14026,12 +15373,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &4277316073412049485 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 4274516052442941453}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4400501858687235838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14902,12 +16243,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &4589932092720453612 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 4592689853990086060}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4593670980025187099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15877,12 +17212,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &5026494404590550649 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 5030388822891075151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5134294142200224278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16670,12 +17999,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &5324500936411767245 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 5326166922743630331}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5348325860507791213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16737,12 +18060,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &5347787016379571501 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 5348325860507791213}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5477050864524594184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17072,12 +18389,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &5941861233371883674 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 5943501031631592154}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5998175767095093629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17139,12 +18450,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &5995409209331882813 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 5998175767095093629}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6114764346144977863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17214,12 +18519,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &6112005070099766257 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 6114764346144977863}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6181177735135897470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17289,12 +18588,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &6181684832352538440 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 6181177735135897470}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6190826045434870193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17350,7 +18643,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4748158747760717803, guid: 6cd36f5ade0ee474ab43ad38e0ba25b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6cd36f5ade0ee474ab43ad38e0ba25b6, type: 3}
 --- !u!4 &6195706895723771107 stripped
 Transform:
@@ -18047,12 +19341,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &6535212583950807613 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 6539095567435743357}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6599292625778062540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18126,12 +19414,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &6600957983620925068 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 6599292625778062540}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6723516548785643839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18833,12 +20115,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &6992332497687970831 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 6991825921582216783}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7045299273700199254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18908,12 +20184,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &7046967523747095392 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 7045299273700199254}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7053759544194984395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19453,12 +20723,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &7153366452106102951 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7155068751868672743}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7207548638552422615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19528,12 +20792,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &7208132907206660321 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 7207548638552422615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7252931731468662084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20155,12 +21413,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &7670075947839726806 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7674028841003325078}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7723801355336059724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20332,12 +21584,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &7772749554027600249 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7768831901904546617}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7888624053821104163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20629,12 +21875,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &7955665864418138593 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7955052450589846433}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7992871186757682290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21172,12 +22412,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &8274754358186722038 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 8276455871413414592}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8329434635464871405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21247,12 +22481,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd082fb4672f6643be6891e17a84358, type: 3}
---- !u!4 &8328894414955423195 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010377046070, guid: ddd082fb4672f6643be6891e17a84358,
-    type: 3}
-  m_PrefabInstance: {fileID: 8329434635464871405}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8381546171690634547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22139,12 +23367,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &8763904335891142760 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 8759942672331188776}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8794609878244337870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22218,12 +23440,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156f975b5c133c846bd7dd4d6c726faf, type: 3}
---- !u!4 &8791746562913933966 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013493088832, guid: 156f975b5c133c846bd7dd4d6c726faf,
-    type: 3}
-  m_PrefabInstance: {fileID: 8794609878244337870}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8801881251959636970
 PrefabInstance:
   m_ObjectHideFlags: 0
